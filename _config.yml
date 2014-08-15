@@ -1,0 +1,27 @@
+# For Atom Feed
+domain: www.organicelement.com
+author: Organic Element LLC
+email: chris.custine@organicelement.com
+title: Organic Element
+
+# standard jekyll configuration
+
+permalink: /articles/:title
+highlighter: pygments
+exclude:
+- master
+- php
+- organicelement.github.io.iml
+
+#include:
+#- _stylesheets
+#- _javascript
+
+markdown: kramdown
+
+# Custom site configuration
+lang: en
+
+sass:
+    sass_dir: master/sass
+    style: :compressed
