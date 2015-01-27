@@ -6,22 +6,37 @@ title: Organic Element
 
 # standard jekyll configuration
 
-permalink: /articles/:title
+#source: porto
+
+#permalink: /blog/:year/:month/:day/:title
+permalink: /blog/articles/:title
 highlighter: pygments
+#highlighter: rouge
 exclude:
 - master
 - php
 - organicelement.github.io.iml
 
 #include:
-#- _stylesheets
+#- blog
 #- _javascript
 
 markdown: kramdown
 
 # Custom site configuration
-lang: en
+#lang: en
 
 sass:
     sass_dir: master/sass
     style: :compressed
+
+paginate: 1
+paginate_path: "/blog/page:num"
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts" # previously `post` in Jekyll 2.2.
+    values:
+      layout: "post"

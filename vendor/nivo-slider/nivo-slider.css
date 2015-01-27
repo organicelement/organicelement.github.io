@@ -74,8 +74,8 @@
 	-moz-opacity: 0.8;
 	filter:alpha(opacity=8);
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
-	box-sizing: border-box;         /* Opera/IE 8+ */
+	-moz-box-sizing: border-box;		/* Firefox, other Gecko */
+	box-sizing: border-box;				 /* Opera/IE 8+ */
 }
 .nivo-caption p {
 	padding:5px;
@@ -85,7 +85,7 @@
 	display:inline !important;
 }
 .nivo-html-caption {
-    display:none;
+		display:none;
 }
 /* Direction nav styles (e.g. Next & Prev) */
 .nivo-directionNav a {

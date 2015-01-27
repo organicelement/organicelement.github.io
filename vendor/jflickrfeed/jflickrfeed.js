@@ -19,7 +19,7 @@
 			},
 			cleanDescription: true,
 			useTemplate: true,
-			itemTemplate: '<li><a href="{{image_b}}"><span class="thumbnail"><img alt="{{title}}" src="{{image_s}}" /></span></a></li>',
+			itemTemplate: '<li><a href="{{image_b}}" title="{{title}}"><span class="thumbnail"><img src="{{image_s}}" /></span></a></li>',
 			itemCallback: function(){}
 		}, settings);
 
@@ -41,9 +41,6 @@
 
 				$.each(data.items, function(i,item){
 					if(i < settings.limit){
-
-						console.log(settings.itemTemplate);
-					
 						// Clean out the Flickr Description
 						if(settings.cleanDescription){
 							var regex = /<p>(.*?)<\/p>/g;

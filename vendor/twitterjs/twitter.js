@@ -1,6 +1,5 @@
 /*
 Plugin Name: 	Twitter Feed
-Written by: 	Okler Themes - (http://www.okler.net)
 Version: 		0.1
 Based On: 		http://www.webdevdoor.com/php/authenticating-twitter-feed-timeline-oauth/
 */
@@ -8,16 +7,16 @@ Based On: 		http://www.webdevdoor.com/php/authenticating-twitter-feed-timeline-o
 var twitterFeed = {
 
 	options: {
-		id: "",
+		username: "",
 		count: 2,
 		URL: "php/twitter-feed.php",
-		wrapper: "tweet"
+		wrapper: $("#tweet")
 	},
 
 	initialize: function( options ) {
 		this.options = $.extend( {}, this.options, options );
 
-		this.options.URL = this.options.URL + "?twitteruser=" + this.options.id + "&notweets=" + this.options.count;
+		this.options.URL = this.options.URL + "?twitteruser=" + this.options.username + "&notweets=" + this.options.count;
 
 		this.build();
 
@@ -32,8 +31,10 @@ var twitterFeed = {
 		var showretweets = true;
 		var showtweetlinks = true;
 		var showprofilepic = true;
+		var wrapper = $this.options.wrapper;
+		var url = $this.options.URL;
 
-		$.getJSON($this.options.URL,
+		$.getJSON(url,
 			function (feeds) {
 
 				var feedHTML = '';
@@ -66,14 +67,14 @@ var twitterFeed = {
 								status = $this.addLink(status);
 							}
 
-							feedHTML += '<i class="icon icon-twitter"></i> ' + status + ' <a class="time"  href="https://twitter.com/' + tweetusername + '/status/' + tweetid + '">' + $this.relativeTime(feeds[i].created_at) + '</a>';
+							feedHTML += '<i class="fa fa-twitter"></i> ' + status + ' <a class="time"  href="https://twitter.com/' + tweetusername + '/status/' + tweetid + '">' + $this.relativeTime(feeds[i].created_at) + '</a>';
 
 							displayCounter++;
 						}
 					}
 				}
 
-				$("#" + $this.options.wrapper).html(feedHTML);
+				wrapper.html(feedHTML);
 			});
 
 	},
@@ -123,9 +124,3 @@ var twitterFeed = {
 	}
 
 };
-
-// Compatibility with old function
-var getTwitters = function(wrapper, options) {
-	options.wrapper = wrapper;
-	twitterFeed.initialize(options);
-}

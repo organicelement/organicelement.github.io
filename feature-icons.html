@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<!--[if IE 8]>			<html class="ie ie8"> <![endif]-->
-<!--[if IE 9]>			<html class="ie ie9"> <![endif]-->
-<!--[if gt IE 9]><!-->	<html> <!--<![endif]-->
+<html>
 	<head>
 
 		<!-- Basic -->
 		<meta charset="utf-8">
-		<title>Icons | Porto - Responsive HTML5 Template 3.1.0</title>		
+		<title>Icons | Porto - Responsive HTML5 Template 3.7.0</title>		
 		<meta name="keywords" content="HTML5 Template" />
 		<meta name="description" content="Porto - Responsive HTML5 Template">
 		<meta name="author" content="okler.net">
@@ -17,14 +15,12 @@
 		<!-- Web Fonts  -->
 		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light" rel="stylesheet" type="text/css">
 
-		<!-- Libs CSS -->
-		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css">
-		<link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.css">
-		<link rel="stylesheet" href="vendor/owl-carousel/owl.carousel.css" media="screen">
-		<link rel="stylesheet" href="vendor/owl-carousel/owl.theme.css" media="screen">
+		<!-- Vendor CSS -->
+		<link rel="stylesheet" href="vendor/bootstrap/bootstrap.css">
+		<link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.css">
+		<link rel="stylesheet" href="vendor/owlcarousel/owl.carousel.min.css" media="screen">
+		<link rel="stylesheet" href="vendor/owlcarousel/owl.theme.default.min.css" media="screen">
 		<link rel="stylesheet" href="vendor/magnific-popup/magnific-popup.css" media="screen">
-		<link rel="stylesheet" href="vendor/isotope/jquery.isotope.css" media="screen">
-		<link rel="stylesheet" href="vendor/mediaelement/mediaelementplayer.css" media="screen">
 
 		<!-- Theme CSS -->
 		<link rel="stylesheet" href="css/theme.css">
@@ -33,24 +29,22 @@
 		<link rel="stylesheet" href="css/theme-shop.css">
 		<link rel="stylesheet" href="css/theme-animate.css">
 
-		<!-- Responsive CSS -->
-		<link rel="stylesheet" href="css/theme-responsive.css" />
-
 		<!-- Skin CSS -->
 		<link rel="stylesheet" href="css/skins/default.css">
 
-		<!-- Custom CSS -->
+		<!-- Theme Custom CSS -->
 		<link rel="stylesheet" href="css/custom.css">
 
 		<!-- Head Libs -->
-		<script src="vendor/modernizr.js"></script>
+		<script src="vendor/modernizr/modernizr.js"></script>
 
 		<!--[if IE]>
 			<link rel="stylesheet" href="css/ie.css">
 		<![endif]-->
 
 		<!--[if lte IE 8]>
-			<script src="vendor/respond.js"></script>
+			<script src="vendor/respond/respond.js"></script>
+			<script src="vendor/excanvas/excanvas.js"></script>
 		<![endif]-->
 
 	</head>
@@ -59,17 +53,17 @@
 		<div class="body">
 			<header id="header">
 				<div class="container">
-					<h1 class="logo">
+					<div class="logo">
 						<a href="index.html">
 							<img alt="Porto" width="111" height="54" data-sticky-width="82" data-sticky-height="40" src="img/logo.png">
 						</a>
-					</h1>
+					</div>
 					<div class="search">
 						<form id="searchForm" action="page-search-results.html" method="get">
 							<div class="input-group">
-								<input type="text" class="form-control search" name="q" id="q" placeholder="Search...">
+								<input type="text" class="form-control search" name="q" id="q" placeholder="Search..." required>
 								<span class="input-group-btn">
-									<button class="btn btn-default" type="submit"><i class="icon icon-search"></i></button>
+									<button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
 								</span>
 							</div>
 						</form>
@@ -77,18 +71,18 @@
 					<nav>
 						<ul class="nav nav-pills nav-top">
 							<li>
-								<a href="about-us.html"><i class="icon icon-angle-right"></i>About Us</a>
+								<a href="about-us.html"><i class="fa fa-angle-right"></i>About Us</a>
 							</li>
 							<li>
-								<a href="contact-us.html"><i class="icon icon-angle-right"></i>Contact Us</a>
+								<a href="contact-us.html"><i class="fa fa-angle-right"></i>Contact Us</a>
 							</li>
 							<li class="phone">
-								<span><i class="icon icon-phone"></i>(123) 456-7890</span>
+								<span><i class="fa fa-phone"></i>(123) 456-7890</span>
 							</li>
 						</ul>
 					</nav>
 					<button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse">
-						<i class="icon icon-bars"></i>
+						<i class="fa fa-bars"></i>
 					</button>
 				</div>
 				<div class="navbar-collapse nav-main-collapse collapse">
@@ -101,11 +95,18 @@
 						<nav class="nav-main mega-menu">
 							<ul class="nav nav-pills nav-main" id="mainMenu">
 								<li class="dropdown">
-									<a class="dropdown-toggle" href="#">
+									<a class="dropdown-toggle" href="index.html">
 										Home
-										<i class="icon icon-angle-down"></i>
+										<i class="fa fa-angle-down"></i>
 									</a>
 									<ul class="dropdown-menu">
+										<li><a href="index.html">Home - Default</a></li>
+										<li><a href="index-1.html">Home - Corporate <span class="tip">hot</span></a></li>
+										<li><a href="index-2.html">Home - Color</a></li>
+										<li><a href="index-3.html">Home - Light</a></li>
+										<li><a href="index-4.html">Home - Video</a></li>
+										<li><a href="index-5.html">Home - Video - Light</a></li>
+										<li><a href="index-one-page.html">One Page Website</a></li>
 										<li class="dropdown-submenu">
 											<a href="#">Sliders</a>
 											<ul class="dropdown-menu">
@@ -113,12 +114,6 @@
 												<li><a href="index-slider-2.html">Nivo Slider</a></li>
 											</ul>
 										</li>
-										<li><a href="index.html">Home - Default</a></li>
-										<li><a href="index-2.html">Home - Color</a></li>
-										<li><a href="index-3.html">Home - Light</a></li>
-										<li><a href="index-4.html">Home - Video</a></li>
-										<li><a href="index-5.html">Home - Video - Light</a></li>
-										<li><a href="index-one-page.html">One Page Website</a></li>
 									</ul>
 								</li>
 								<li>
@@ -127,7 +122,7 @@
 								<li class="dropdown">
 									<a class="dropdown-toggle" href="#">
 										About Us
-										<i class="icon icon-angle-down"></i>
+										<i class="fa fa-angle-down"></i>
 									</a>
 									<ul class="dropdown-menu">
 										<li><a href="about-us.html">About Us</a></li>
@@ -138,7 +133,7 @@
 								<li class="dropdown mega-menu-item mega-menu-fullwidth active">
 									<a class="dropdown-toggle" href="#">
 										Features
-										<i class="icon icon-angle-down"></i>
+										<i class="fa fa-angle-down"></i>
 									</a>
 									<ul class="dropdown-menu">
 										<li>
@@ -163,28 +158,41 @@
 															<li>
 																<span class="mega-menu-sub-title">Headers</span>
 																<ul class="sub-menu">
-																	<li><a href="index-header-2.html">Header Version 2</a></li>
-																	<li><a href="index-header-3.html">Header Version 3</a></li>
-																	<li><a href="index-header-4.html">Header Version 4</a></li>
-																	<li><a href="index-header-5.html">Header Version 5</a></li>
-																	<li><a href="index-header-6.html">Header Version 6</a></li>
-																	<li><a href="index-header-7.html">Header Version 7 (Below Slider)</a></li>
-																	<li><a href="index-header-8.html">Header Version 8 (Full Video)</a></li>
+																	<li><a href="headers-overview.html">Overview</a></li>
+																	<li><a href="index-header-2.html">Header 2</a></li>
+																	<li><a href="index-header-3.html">Header 3</a></li>
+																	<li><a href="index-header-4.html">Header 4</a></li>
+																	<li><a href="index-header-5.html">Header 5</a></li>
+																	<li><a href="index-header-6.html">Header 6</a></li>
+																	<li><a href="index-header-7.html">Header 7 - Below Slider</a></li>
+																	<li><a href="index-header-8.html">Header 8 - Full Video</a></li>
+																	<li><a href="index-header-9.html">Header 9 - Narrow</a></li>
+																	<li><a href="index-header-10.html">Header 10 - Always Sticky</a></li>
+																	<li><a href="index-header-11.html">Header 11 - Transparent</a></li>
+																	<li><a href="index-header-12.html">Header 12 - Semi Transparent</a></li>
+																	<li><a href="index-header-13.html">Header 13 - Semi Transparent - Light</a></li>
+																	<li><a href="index-header-14.html">Header 14 - Full-Width</a></li>
+																</ul>
+															</li>
+														</ul>
+													</div>
+													<div class="col-md-3">
+														<ul class="sub-menu">
+															<li>
+																<span class="mega-menu-sub-title">Header Account</span>
+																<ul class="sub-menu">
 																	<li><a href="index-header-signin.html">Header - Sign In / Sign Up</a></li>
 																	<li><a href="index-header-logged.html">Header - Logged</a></li>
 																</ul>
-															</li>
-														</ul>
-													</div>
-													<div class="col-md-3">
-														<ul class="sub-menu">
-															<li>
 																<span class="mega-menu-sub-title">Footers</span>
 																<ul class="sub-menu">
-																	<li><a href="index.html#footer">Footer Version 1</a></li>
-																	<li><a href="index-footer-2.html#footer">Footer Version 2</a></li>
-																	<li><a href="index-footer-3.html#footer">Footer Version 3</a></li>
-																	<li><a href="index-footer-4.html#footer">Footer Version 4</a></li>
+																	<li><a href="index.html#footer">Footer 1</a></li>
+																	<li><a href="index-footer-2.html#footer">Footer 2</a></li>
+																	<li><a href="index-footer-3.html#footer">Footer 3</a></li>
+																	<li><a href="index-footer-4.html#footer">Footer 4</a></li>
+																	<li><a href="index-footer-5.html#footer">Footer 5 - Light</a></li>
+																	<li><a href="index-footer-6.html#footer">Footer 6 - Light Narrow</a></li>
+																	<li><a href="index-footer-7.html#footer">Footer 7 - Color</a></li>
 																</ul>
 															</li>
 														</ul>
@@ -192,13 +200,17 @@
 													<div class="col-md-3">
 														<ul class="sub-menu">
 															<li>
-																<span class="mega-menu-sub-title">Blog</span>
+																<span class="mega-menu-sub-title">Admin Extension <em class="not-included">(Not Included)</em></span>
 																<ul class="sub-menu">
-																	<li><a href="blog-full-width.html">Blog Full Width</a></li>
-																	<li><a href="blog-large-image.html">Blog Large Image</a></li>
-																	<li><a href="blog-medium-image.html">Blog Medium Image</a></li>
-																	<li><a href="blog-timeline.html">Blog Timeline</a></li>
-																	<li><a href="blog-post.html">Single Post</a></li>
+																	<li><a href="feature-admin-forms-basic.html">Forms Basic</a></li>
+																	<li><a href="feature-admin-forms-advanced.html">Forms Advanced</a></li>
+																	<li><a href="feature-admin-forms-wizard.html">Forms Wizard</a></li>
+																	<li><a href="feature-admin-forms-code-editor.html">Code Editor</a></li>
+																	<li><a href="feature-admin-tables-advanced.html">Tables Advanced</a></li>
+																	<li><a href="feature-admin-tables-responsive.html">Tables Responsive</a></li>
+																	<li><a href="feature-admin-tables-editable.html">Tables Editable</a></li>
+																	<li><a href="feature-admin-tables-ajax.html">Tables Ajax</a></li>
+																	<li><a href="feature-admin-charts.html">Charts</a></li>
 																</ul>
 															</li>
 														</ul>
@@ -211,7 +223,7 @@
 								<li class="dropdown">
 									<a class="dropdown-toggle" href="#">
 										Portfolio
-										<i class="icon icon-angle-down"></i>
+										<i class="fa fa-angle-down"></i>
 									</a>
 									<ul class="dropdown-menu">
 										<li><a href="portfolio-4-columns.html">4 Columns</a></li>
@@ -226,7 +238,7 @@
 								<li class="dropdown">
 									<a class="dropdown-toggle" href="#">
 										Pages
-										<i class="icon icon-angle-down"></i>
+										<i class="fa fa-angle-down"></i>
 									</a>
 									<ul class="dropdown-menu">
 										<li class="dropdown-submenu">
@@ -241,23 +253,46 @@
 												<li><a href="shop-checkout.html">Shop - Checkout</a></li>
 											</ul>
 										</li>
-										<li><a href="page-full-width.html">Full width</a></li>
-										<li><a href="page-left-sidebar.html">Left sidebar</a></li>
-										<li><a href="page-right-sidebar.html">Right sidebar</a></li>
+										<li class="dropdown-submenu">
+											<a href="#">Blog</a>
+											<ul class="dropdown-menu">
+												<li><a href="blog-full-width.html">Blog Full Width</a></li>
+												<li><a href="blog-large-image.html">Blog Large Image</a></li>
+												<li><a href="blog-medium-image.html">Blog Medium Image</a></li>
+												<li><a href="blog-timeline.html">Blog Timeline</a></li>
+												<li><a href="blog-post.html">Single Post</a></li>
+											</ul>
+										</li>
+										<li class="dropdown-submenu">
+											<a href="#">Layouts</a>
+											<ul class="dropdown-menu">
+												<li><a href="page-full-width.html">Full width</a></li>
+												<li><a href="page-left-sidebar.html">Left sidebar</a></li>
+												<li><a href="page-right-sidebar.html">Right sidebar</a></li>
+											</ul>
+										</li>
+										<li class="dropdown-submenu">
+											<a href="#">Extra</a>
+											<ul class="dropdown-menu">
+												<li><a href="page-404.html">404 Error</a></li>
+												<li><a href="page-coming-soon.html">Coming Soon</a></li>
+												<li><a href="page-maintenance-mode.html">Maintenance Mode</a></li>
+												<li><a href="sitemap.html">Sitemap</a></li>
+											</ul>
+										</li>
 										<li><a href="page-custom-header.html">Custom Header</a></li>
-										<li><a href="page-404.html">404 Error</a></li>
 										<li><a href="page-team.html">Team</a></li>
 										<li><a href="page-services.html">Services</a></li>
 										<li><a href="page-careers.html">Careers</a></li>
+										<li><a href="page-our-office.html">Our Office</a></li>
 										<li><a href="page-faq.html">FAQ</a></li>
 										<li><a href="page-login.html">Login / Register</a></li>
-										<li><a href="sitemap.html">Sitemap</a></li>
 									</ul>
 								</li>
 								<li class="dropdown">
 									<a class="dropdown-toggle" href="#">
 										Contact Us
-										<i class="icon icon-angle-down"></i>
+										<i class="fa fa-angle-down"></i>
 									</a>
 									<ul class="dropdown-menu">
 										<li><a href="contact-us.html">Contact Us - Basic</a></li>
@@ -284,7 +319,7 @@
 						</div>
 						<div class="row">
 							<div class="col-md-12">
-								<h2>Icons</h2>
+								<h1>Icons</h1>
 							</div>
 						</div>
 					</div>
@@ -297,58 +332,144 @@
 					<div class="row">
 						<div class="col-md-12">
 							<p class="lead">
-								Porto includes the popular <a href="http://fortawesome.github.com/Font-Awesome/" target="_blank">Font Awesome</a> - The complete set of 369 icons in Font Awesome 4.0.3.
+								Porto includes the popular <a href="http://fortawesome.github.com/Font-Awesome/" target="_blank">Font Awesome</a> - The complete set of 439 icons in Font Awesome 4.2.0
 							</p>
 						</div>
-						<div class="icons-list">
-							<div class="col-md-12">
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="fontawesome-icon-list">
 								<div id="new">
-									<h2 class="page-header">11 New Icons in 4.0</h2>
+									<h2 class="page-header">40 New Icons in 4.2</h2>
 									<div class="row fontawesome-icon-list">
 										<div class="col-md-3 col-sm-4">
-											<i class="icon icon-rub"></i> icon-rub
+											<i class="fa fa-angellist"></i> fa-angellist
 										</div>
 										<div class="col-md-3 col-sm-4">
-											<i class="icon icon-ruble"></i> icon-ruble <span class="text-muted">(alias)</span>
+											<i class="fa fa-area-chart"></i> fa-area-chart
 										</div>
 										<div class="col-md-3 col-sm-4">
-											<i class="icon icon-rouble"></i> icon-rouble <span class="text-muted">(alias)</span>
+											<i class="fa fa-at"></i> fa-at
 										</div>
 										<div class="col-md-3 col-sm-4">
-											<i class="icon icon-pagelines"></i> icon-pagelines
+											<i class="fa fa-bell-slash"></i> fa-bell-slash
 										</div>
 										<div class="col-md-3 col-sm-4">
-											<i class="icon icon-stack-exchange"></i> icon-stack-exchange
+											<i class="fa fa-bell-slash-o"></i> fa-bell-slash-o
 										</div>
 										<div class="col-md-3 col-sm-4">
-											<i class="icon icon-arrow-circle-o-right"></i> icon-arrow-circle-o-right
+											<i class="fa fa-bicycle"></i> fa-bicycle
 										</div>
 										<div class="col-md-3 col-sm-4">
-											<i class="icon icon-arrow-circle-o-left"></i> icon-arrow-circle-o-left
+											<i class="fa fa-binoculars"></i> fa-binoculars
 										</div>
 										<div class="col-md-3 col-sm-4">
-											<i class="icon icon-caret-square-o-left"></i> icon-caret-square-o-left
+											<i class="fa fa-birthday-cake"></i> fa-birthday-cake
 										</div>
 										<div class="col-md-3 col-sm-4">
-											<i class="icon icon-toggle-left"></i> icon-toggle-left <span class="text-muted">(alias)</span>
+											<i class="fa fa-bus"></i> fa-bus
 										</div>
 										<div class="col-md-3 col-sm-4">
-											<i class="icon icon-dot-circle-o"></i> icon-dot-circle-o
+											<i class="fa fa-calculator"></i> fa-calculator
 										</div>
 										<div class="col-md-3 col-sm-4">
-											<i class="icon icon-wheelchair"></i> icon-wheelchair
+											<i class="fa fa-cc"></i> fa-cc
 										</div>
 										<div class="col-md-3 col-sm-4">
-											<i class="icon icon-vimeo-square"></i> icon-vimeo-square
+											<i class="fa fa-cc-amex"></i> fa-cc-amex
 										</div>
 										<div class="col-md-3 col-sm-4">
-											<i class="icon icon-try"></i> icon-try
+											<i class="fa fa-cc-discover"></i> fa-cc-discover
 										</div>
 										<div class="col-md-3 col-sm-4">
-											<i class="icon icon-turkish-lira"></i> icon-turkish-lira <span class="text-muted">(alias)</span>
+											<i class="fa fa-cc-mastercard"></i> fa-cc-mastercard
 										</div>
 										<div class="col-md-3 col-sm-4">
-											<i class="icon icon-plus-square-o"></i> icon-plus-square-o
+											<i class="fa fa-cc-paypal"></i> fa-cc-paypal
+										</div>
+										<div class="col-md-3 col-sm-4">
+											<i class="fa fa-cc-stripe"></i> fa-cc-stripe
+										</div>
+										<div class="col-md-3 col-sm-4">
+											<i class="fa fa-cc-visa"></i> fa-cc-visa
+										</div>
+										<div class="col-md-3 col-sm-4">
+											<i class="fa fa-copyright"></i> fa-copyright
+										</div>
+										<div class="col-md-3 col-sm-4">
+											<i class="fa fa-eyedropper"></i> fa-eyedropper
+										</div>
+										<div class="col-md-3 col-sm-4">
+											<i class="fa fa-futbol-o"></i> fa-futbol-o
+										</div>
+										<div class="col-md-3 col-sm-4">
+											<i class="fa fa-google-wallet"></i> fa-google-wallet
+										</div>
+										<div class="col-md-3 col-sm-4">
+											<i class="fa fa-ils"></i> fa-ils
+										</div>
+										<div class="col-md-3 col-sm-4">
+											<i class="fa fa-ioxhost"></i> fa-ioxhost
+										</div>
+										<div class="col-md-3 col-sm-4">
+											<i class="fa fa-lastfm"></i> fa-lastfm
+										</div>
+										<div class="col-md-3 col-sm-4">
+											<i class="fa fa-lastfm-square"></i> fa-lastfm-square
+										</div>
+										<div class="col-md-3 col-sm-4">
+											<i class="fa fa-line-chart"></i> fa-line-chart
+										</div>
+										<div class="col-md-3 col-sm-4">
+											<i class="fa fa-meanpath"></i> fa-meanpath
+										</div>
+										<div class="col-md-3 col-sm-4">
+											<i class="fa fa-newspaper-o"></i> fa-newspaper-o
+										</div>
+										<div class="col-md-3 col-sm-4">
+											<i class="fa fa-paint-brush"></i> fa-paint-brush
+										</div>
+										<div class="col-md-3 col-sm-4">
+											<i class="fa fa-paypal"></i> fa-paypal
+										</div>
+										<div class="col-md-3 col-sm-4">
+											<i class="fa fa-pie-chart"></i> fa-pie-chart
+										</div>
+										<div class="col-md-3 col-sm-4">
+											<i class="fa fa-plug"></i> fa-plug
+										</div>
+										<div class="col-md-3 col-sm-4">
+											<i class="fa fa-shekel"></i> fa-shekel <span class="text-muted">(alias)</span>
+										</div>
+										<div class="col-md-3 col-sm-4">
+											<i class="fa fa-sheqel"></i> fa-sheqel <span class="text-muted">(alias)</span>
+										</div>
+										<div class="col-md-3 col-sm-4">
+											<i class="fa fa-slideshare"></i> fa-slideshare
+										</div>
+										<div class="col-md-3 col-sm-4">
+											<i class="fa fa-soccer-ball-o"></i> fa-soccer-ball-o <span class="text-muted">(alias)</span>
+										</div>
+										<div class="col-md-3 col-sm-4">
+											<i class="fa fa-toggle-off"></i> fa-toggle-off
+										</div>
+										<div class="col-md-3 col-sm-4">
+											<i class="fa fa-toggle-on"></i> fa-toggle-on
+										</div>
+										<div class="col-md-3 col-sm-4">
+											<i class="fa fa-trash"></i> fa-trash
+										</div>
+										<div class="col-md-3 col-sm-4">
+											<i class="fa fa-tty"></i> fa-tty
+										</div>
+										<div class="col-md-3 col-sm-4">
+											<i class="fa fa-twitch"></i> fa-twitch
+										</div>
+										<div class="col-md-3 col-sm-4">
+											<i class="fa fa-wifi"></i> fa-wifi
+										</div>
+										<div class="col-md-3 col-sm-4">
+											<i class="fa fa-yelp"></i> fa-yelp
 										</div>
 									</div>
 								</div>
@@ -356,721 +477,1049 @@
 								<h2 class="page-header">Web Application Icons</h2>
 								<div class="row fontawesome-icon-list">
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-adjust"></i> icon-adjust
+										<i class="fa fa-adjust"></i> fa-adjust
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-anchor"></i> icon-anchor
+										<i class="fa fa-anchor"></i> fa-anchor
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-archive"></i> icon-archive
+										<i class="fa fa-archive"></i> fa-archive
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-arrows"></i> icon-arrows
+										<i class="fa fa-area-chart"></i> fa-area-chart
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-arrows-h"></i> icon-arrows-h
+										<i class="fa fa-arrows"></i> fa-arrows
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-arrows-v"></i> icon-arrows-v
+										<i class="fa fa-arrows-h"></i> fa-arrows-h
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-asterisk"></i> icon-asterisk
+										<i class="fa fa-arrows-v"></i> fa-arrows-v
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-ban"></i> icon-ban
+										<i class="fa fa-asterisk"></i> fa-asterisk
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-bar-chart-o"></i> icon-bar-chart-o
+										<i class="fa fa-at"></i> fa-at
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-barcode"></i> icon-barcode
+										<i class="fa fa-automobile"></i> fa-automobile <span class="text-muted">(alias)</span>
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-bars"></i> icon-bars
+										<i class="fa fa-ban"></i> fa-ban
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-beer"></i> icon-beer
+										<i class="fa fa-bank"></i> fa-bank <span class="text-muted">(alias)</span>
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-bell"></i> icon-bell
+										<i class="fa fa-bar-chart"></i> fa-bar-chart
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-bell-o"></i> icon-bell-o
+										<i class="fa fa-bar-chart-o"></i> fa-bar-chart-o <span class="text-muted">(alias)</span>
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-bolt"></i> icon-bolt
+										<i class="fa fa-barcode"></i> fa-barcode
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-book"></i> icon-book
+										<i class="fa fa-bars"></i> fa-bars
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-bookmark"></i> icon-bookmark
+										<i class="fa fa-beer"></i> fa-beer
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-bookmark-o"></i> icon-bookmark-o
+										<i class="fa fa-bell"></i> fa-bell
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-briefcase"></i> icon-briefcase
+										<i class="fa fa-bell-o"></i> fa-bell-o
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-bug"></i> icon-bug
+										<i class="fa fa-bell-slash"></i> fa-bell-slash
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-building-o"></i> icon-building-o
+										<i class="fa fa-bell-slash-o"></i> fa-bell-slash-o
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-bullhorn"></i> icon-bullhorn
+										<i class="fa fa-bicycle"></i> fa-bicycle
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-bullseye"></i> icon-bullseye
+										<i class="fa fa-binoculars"></i> fa-binoculars
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-calendar"></i> icon-calendar
+										<i class="fa fa-birthday-cake"></i> fa-birthday-cake
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-calendar-o"></i> icon-calendar-o
+										<i class="fa fa-bolt"></i> fa-bolt
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-camera"></i> icon-camera
+										<i class="fa fa-bomb"></i> fa-bomb
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-camera-retro"></i> icon-camera-retro
+										<i class="fa fa-book"></i> fa-book
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-caret-square-o-down"></i> icon-caret-square-o-down
+										<i class="fa fa-bookmark"></i> fa-bookmark
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-caret-square-o-left"></i> icon-caret-square-o-left
+										<i class="fa fa-bookmark-o"></i> fa-bookmark-o
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-caret-square-o-right"></i> icon-caret-square-o-right
+										<i class="fa fa-briefcase"></i> fa-briefcase
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-caret-square-o-up"></i> icon-caret-square-o-up
+										<i class="fa fa-bug"></i> fa-bug
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-certificate"></i> icon-certificate
+										<i class="fa fa-building"></i> fa-building
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-check"></i> icon-check
+										<i class="fa fa-building-o"></i> fa-building-o
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-check-circle"></i> icon-check-circle
+										<i class="fa fa-bullhorn"></i> fa-bullhorn
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-check-circle-o"></i> icon-check-circle-o
+										<i class="fa fa-bullseye"></i> fa-bullseye
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-check-square"></i> icon-check-square
+										<i class="fa fa-bus"></i> fa-bus
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-check-square-o"></i> icon-check-square-o
+										<i class="fa fa-cab"></i> fa-cab <span class="text-muted">(alias)</span>
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-circle"></i> icon-circle
+										<i class="fa fa-calculator"></i> fa-calculator
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-circle-o"></i> icon-circle-o
+										<i class="fa fa-calendar"></i> fa-calendar
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-clock-o"></i> icon-clock-o
+										<i class="fa fa-calendar-o"></i> fa-calendar-o
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-cloud"></i> icon-cloud
+										<i class="fa fa-camera"></i> fa-camera
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-cloud-download"></i> icon-cloud-download
+										<i class="fa fa-camera-retro"></i> fa-camera-retro
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-cloud-upload"></i> icon-cloud-upload
+										<i class="fa fa-car"></i> fa-car
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-code"></i> icon-code
+										<i class="fa fa-caret-square-o-down"></i> fa-caret-square-o-down
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-code-fork"></i> icon-code-fork
+										<i class="fa fa-caret-square-o-left"></i> fa-caret-square-o-left
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-coffee"></i> icon-coffee
+										<i class="fa fa-caret-square-o-right"></i> fa-caret-square-o-right
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-cog"></i> icon-cog
+										<i class="fa fa-caret-square-o-up"></i> fa-caret-square-o-up
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-cogs"></i> icon-cogs
+										<i class="fa fa-cc"></i> fa-cc
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-comment"></i> icon-comment
+										<i class="fa fa-certificate"></i> fa-certificate
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-comment-o"></i> icon-comment-o
+										<i class="fa fa-check"></i> fa-check
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-comments"></i> icon-comments
+										<i class="fa fa-check-circle"></i> fa-check-circle
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-comments-o"></i> icon-comments-o
+										<i class="fa fa-check-circle-o"></i> fa-check-circle-o
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-compass"></i> icon-compass
+										<i class="fa fa-check-square"></i> fa-check-square
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-credit-card"></i> icon-credit-card
+										<i class="fa fa-check-square-o"></i> fa-check-square-o
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-crop"></i> icon-crop
+										<i class="fa fa-child"></i> fa-child
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-crosshairs"></i> icon-crosshairs
+										<i class="fa fa-circle"></i> fa-circle
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-cutlery"></i> icon-cutlery
+										<i class="fa fa-circle-o"></i> fa-circle-o
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-dashboard"></i> icon-dashboard <span class="text-muted">(alias)</span>
+										<i class="fa fa-circle-o-notch"></i> fa-circle-o-notch
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-desktop"></i> icon-desktop
+										<i class="fa fa-circle-thin"></i> fa-circle-thin
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-dot-circle-o"></i> icon-dot-circle-o
+										<i class="fa fa-clock-o"></i> fa-clock-o
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-download"></i> icon-download
+										<i class="fa fa-close"></i> fa-close <span class="text-muted">(alias)</span>
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-edit"></i> icon-edit <span class="text-muted">(alias)</span>
+										<i class="fa fa-cloud"></i> fa-cloud
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-ellipsis-h"></i> icon-ellipsis-h
+										<i class="fa fa-cloud-download"></i> fa-cloud-download
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-ellipsis-v"></i> icon-ellipsis-v
+										<i class="fa fa-cloud-upload"></i> fa-cloud-upload
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-envelope"></i> icon-envelope
+										<i class="fa fa-code"></i> fa-code
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-envelope-o"></i> icon-envelope-o
+										<i class="fa fa-code-fork"></i> fa-code-fork
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-eraser"></i> icon-eraser
+										<i class="fa fa-coffee"></i> fa-coffee
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-exchange"></i> icon-exchange
+										<i class="fa fa-cog"></i> fa-cog
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-exclamation"></i> icon-exclamation
+										<i class="fa fa-cogs"></i> fa-cogs
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-exclamation-circle"></i> icon-exclamation-circle
+										<i class="fa fa-comment"></i> fa-comment
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-exclamation-triangle"></i> icon-exclamation-triangle
+										<i class="fa fa-comment-o"></i> fa-comment-o
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-external-link"></i> icon-external-link
+										<i class="fa fa-comments"></i> fa-comments
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-external-link-square"></i> icon-external-link-square
+										<i class="fa fa-comments-o"></i> fa-comments-o
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-eye"></i> icon-eye
+										<i class="fa fa-compass"></i> fa-compass
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-eye-slash"></i> icon-eye-slash
+										<i class="fa fa-copyright"></i> fa-copyright
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-female"></i> icon-female
+										<i class="fa fa-credit-card"></i> fa-credit-card
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-fighter-jet"></i> icon-fighter-jet
+										<i class="fa fa-crop"></i> fa-crop
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-film"></i> icon-film
+										<i class="fa fa-crosshairs"></i> fa-crosshairs
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-filter"></i> icon-filter
+										<i class="fa fa-cube"></i> fa-cube
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-fire"></i> icon-fire
+										<i class="fa fa-cubes"></i> fa-cubes
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-fire-extinguisher"></i> icon-fire-extinguisher
+										<i class="fa fa-cutlery"></i> fa-cutlery
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-flag"></i> icon-flag
+										<i class="fa fa-dashboard"></i> fa-dashboard <span class="text-muted">(alias)</span>
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-flag-checkered"></i> icon-flag-checkered
+										<i class="fa fa-database"></i> fa-database
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-flag-o"></i> icon-flag-o
+										<i class="fa fa-desktop"></i> fa-desktop
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-flash"></i> icon-flash <span class="text-muted">(alias)</span>
+										<i class="fa fa-dot-circle-o"></i> fa-dot-circle-o
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-flask"></i> icon-flask
+										<i class="fa fa-download"></i> fa-download
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-folder"></i> icon-folder
+										<i class="fa fa-edit"></i> fa-edit <span class="text-muted">(alias)</span>
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-folder-o"></i> icon-folder-o
+										<i class="fa fa-ellipsis-h"></i> fa-ellipsis-h
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-folder-open"></i> icon-folder-open
+										<i class="fa fa-ellipsis-v"></i> fa-ellipsis-v
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-folder-open-o"></i> icon-folder-open-o
+										<i class="fa fa-envelope"></i> fa-envelope
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-frown-o"></i> icon-frown-o
+										<i class="fa fa-envelope-o"></i> fa-envelope-o
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-gamepad"></i> icon-gamepad
+										<i class="fa fa-envelope-square"></i> fa-envelope-square
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-gavel"></i> icon-gavel
+										<i class="fa fa-eraser"></i> fa-eraser
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-gear"></i> icon-gear <span class="text-muted">(alias)</span>
+										<i class="fa fa-exchange"></i> fa-exchange
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-gears"></i> icon-gears <span class="text-muted">(alias)</span>
+										<i class="fa fa-exclamation"></i> fa-exclamation
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-gift"></i> icon-gift
+										<i class="fa fa-exclamation-circle"></i> fa-exclamation-circle
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-glass"></i> icon-glass
+										<i class="fa fa-exclamation-triangle"></i> fa-exclamation-triangle
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-globe"></i> icon-globe
+										<i class="fa fa-external-link"></i> fa-external-link
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-group"></i> icon-group <span class="text-muted">(alias)</span>
+										<i class="fa fa-external-link-square"></i> fa-external-link-square
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-hdd-o"></i> icon-hdd-o
+										<i class="fa fa-eye"></i> fa-eye
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-headphones"></i> icon-headphones
+										<i class="fa fa-eye-slash"></i> fa-eye-slash
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-heart"></i> icon-heart
+										<i class="fa fa-eyedropper"></i> fa-eyedropper
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-heart-o"></i> icon-heart-o
+										<i class="fa fa-fax"></i> fa-fax
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-home"></i> icon-home
+										<i class="fa fa-female"></i> fa-female
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-inbox"></i> icon-inbox
+										<i class="fa fa-fighter-jet"></i> fa-fighter-jet
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-info"></i> icon-info
+										<i class="fa fa-file-archive-o"></i> fa-file-archive-o
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-info-circle"></i> icon-info-circle
+										<i class="fa fa-file-audio-o"></i> fa-file-audio-o
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-key"></i> icon-key
+										<i class="fa fa-file-code-o"></i> fa-file-code-o
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-keyboard-o"></i> icon-keyboard-o
+										<i class="fa fa-file-excel-o"></i> fa-file-excel-o
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-laptop"></i> icon-laptop
+										<i class="fa fa-file-image-o"></i> fa-file-image-o
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-leaf"></i> icon-leaf
+										<i class="fa fa-file-movie-o"></i> fa-file-movie-o <span class="text-muted">(alias)</span>
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-legal"></i> icon-legal <span class="text-muted">(alias)</span>
+										<i class="fa fa-file-pdf-o"></i> fa-file-pdf-o
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-lemon-o"></i> icon-lemon-o
+										<i class="fa fa-file-photo-o"></i> fa-file-photo-o <span class="text-muted">(alias)</span>
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-level-down"></i> icon-level-down
+										<i class="fa fa-file-picture-o"></i> fa-file-picture-o <span class="text-muted">(alias)</span>
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-level-up"></i> icon-level-up
+										<i class="fa fa-file-powerpoint-o"></i> fa-file-powerpoint-o
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-lightbulb-o"></i> icon-lightbulb-o
+										<i class="fa fa-file-sound-o"></i> fa-file-sound-o <span class="text-muted">(alias)</span>
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-location-arrow"></i> icon-location-arrow
+										<i class="fa fa-file-video-o"></i> fa-file-video-o
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-lock"></i> icon-lock
+										<i class="fa fa-file-word-o"></i> fa-file-word-o
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-magic"></i> icon-magic
+										<i class="fa fa-file-zip-o"></i> fa-file-zip-o <span class="text-muted">(alias)</span>
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-magnet"></i> icon-magnet
+										<i class="fa fa-film"></i> fa-film
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-mail-forward"></i> icon-mail-forward <span class="text-muted">(alias)</span>
+										<i class="fa fa-filter"></i> fa-filter
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-mail-reply"></i> icon-mail-reply <span class="text-muted">(alias)</span>
+										<i class="fa fa-fire"></i> fa-fire
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-mail-reply-all"></i> icon-mail-reply-all
+										<i class="fa fa-fire-extinguisher"></i> fa-fire-extinguisher
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-male"></i> icon-male
+										<i class="fa fa-flag"></i> fa-flag
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-map-marker"></i> icon-map-marker
+										<i class="fa fa-flag-checkered"></i> fa-flag-checkered
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-meh-o"></i> icon-meh-o
+										<i class="fa fa-flag-o"></i> fa-flag-o
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-microphone"></i> icon-microphone
+										<i class="fa fa-flash"></i> fa-flash <span class="text-muted">(alias)</span>
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-microphone-slash"></i> icon-microphone-slash
+										<i class="fa fa-flask"></i> fa-flask
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-minus"></i> icon-minus
+										<i class="fa fa-folder"></i> fa-folder
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-minus-circle"></i> icon-minus-circle
+										<i class="fa fa-folder-o"></i> fa-folder-o
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-minus-square"></i> icon-minus-square
+										<i class="fa fa-folder-open"></i> fa-folder-open
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-minus-square-o"></i> icon-minus-square-o
+										<i class="fa fa-folder-open-o"></i> fa-folder-open-o
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-mobile"></i> icon-mobile
+										<i class="fa fa-frown-o"></i> fa-frown-o
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-mobile-phone"></i> icon-mobile-phone <span class="text-muted">(alias)</span>
+										<i class="fa fa-futbol-o"></i> fa-futbol-o
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-money"></i> icon-money
+										<i class="fa fa-gamepad"></i> fa-gamepad
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-moon-o"></i> icon-moon-o
+										<i class="fa fa-gavel"></i> fa-gavel
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-music"></i> icon-music
+										<i class="fa fa-gear"></i> fa-gear <span class="text-muted">(alias)</span>
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-pencil"></i> icon-pencil
+										<i class="fa fa-gears"></i> fa-gears <span class="text-muted">(alias)</span>
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-pencil-square"></i> icon-pencil-square
+										<i class="fa fa-gift"></i> fa-gift
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-pencil-square-o"></i> icon-pencil-square-o
+										<i class="fa fa-glass"></i> fa-glass
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-phone"></i> icon-phone
+										<i class="fa fa-globe"></i> fa-globe
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-phone-square"></i> icon-phone-square
+										<i class="fa fa-graduation-cap"></i> fa-graduation-cap
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-picture-o"></i> icon-picture-o
+										<i class="fa fa-group"></i> fa-group <span class="text-muted">(alias)</span>
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-plane"></i> icon-plane
+										<i class="fa fa-hdd-o"></i> fa-hdd-o
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-plus"></i> icon-plus
+										<i class="fa fa-headphones"></i> fa-headphones
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-plus-circle"></i> icon-plus-circle
+										<i class="fa fa-heart"></i> fa-heart
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-plus-square"></i> icon-plus-square
+										<i class="fa fa-heart-o"></i> fa-heart-o
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-plus-square-o"></i> icon-plus-square-o
+										<i class="fa fa-history"></i> fa-history
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-power-off"></i> icon-power-off
+										<i class="fa fa-home"></i> fa-home
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-print"></i> icon-print
+										<i class="fa fa-image"></i> fa-image <span class="text-muted">(alias)</span>
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-puzzle-piece"></i> icon-puzzle-piece
+										<i class="fa fa-inbox"></i> fa-inbox
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-qrcode"></i> icon-qrcode
+										<i class="fa fa-info"></i> fa-info
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-question"></i> icon-question
+										<i class="fa fa-info-circle"></i> fa-info-circle
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-question-circle"></i> icon-question-circle
+										<i class="fa fa-institution"></i> fa-institution <span class="text-muted">(alias)</span>
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-quote-left"></i> icon-quote-left
+										<i class="fa fa-key"></i> fa-key
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-quote-right"></i> icon-quote-right
+										<i class="fa fa-keyboard-o"></i> fa-keyboard-o
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-random"></i> icon-random
+										<i class="fa fa-language"></i> fa-language
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-refresh"></i> icon-refresh
+										<i class="fa fa-laptop"></i> fa-laptop
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-reply"></i> icon-reply
+										<i class="fa fa-leaf"></i> fa-leaf
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-reply-all"></i> icon-reply-all
+										<i class="fa fa-legal"></i> fa-legal <span class="text-muted">(alias)</span>
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-retweet"></i> icon-retweet
+										<i class="fa fa-lemon-o"></i> fa-lemon-o
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-road"></i> icon-road
+										<i class="fa fa-level-down"></i> fa-level-down
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-rocket"></i> icon-rocket
+										<i class="fa fa-level-up"></i> fa-level-up
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-rss"></i> icon-rss
+										<i class="fa fa-life-bouy"></i> fa-life-bouy <span class="text-muted">(alias)</span>
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-rss-square"></i> icon-rss-square
+										<i class="fa fa-life-buoy"></i> fa-life-buoy <span class="text-muted">(alias)</span>
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-search"></i> icon-search
+										<i class="fa fa-life-ring"></i> fa-life-ring
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-search-minus"></i> icon-search-minus
+										<i class="fa fa-life-saver"></i> fa-life-saver <span class="text-muted">(alias)</span>
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-search-plus"></i> icon-search-plus
+										<i class="fa fa-lightbulb-o"></i> fa-lightbulb-o
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-share"></i> icon-share
+										<i class="fa fa-line-chart"></i> fa-line-chart
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-share-square"></i> icon-share-square
+										<i class="fa fa-location-arrow"></i> fa-location-arrow
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-share-square-o"></i> icon-share-square-o
+										<i class="fa fa-lock"></i> fa-lock
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-shield"></i> icon-shield
+										<i class="fa fa-magic"></i> fa-magic
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-shopping-cart"></i> icon-shopping-cart
+										<i class="fa fa-magnet"></i> fa-magnet
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-sign-in"></i> icon-sign-in
+										<i class="fa fa-mail-forward"></i> fa-mail-forward <span class="text-muted">(alias)</span>
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-sign-out"></i> icon-sign-out
+										<i class="fa fa-mail-reply"></i> fa-mail-reply <span class="text-muted">(alias)</span>
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-signal"></i> icon-signal
+										<i class="fa fa-mail-reply-all"></i> fa-mail-reply-all <span class="text-muted">(alias)</span>
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-sitemap"></i> icon-sitemap
+										<i class="fa fa-male"></i> fa-male
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-smile-o"></i> icon-smile-o
+										<i class="fa fa-map-marker"></i> fa-map-marker
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-sort"></i> icon-sort
+										<i class="fa fa-meh-o"></i> fa-meh-o
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-sort-alpha-asc"></i> icon-sort-alpha-asc
+										<i class="fa fa-microphone"></i> fa-microphone
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-sort-alpha-desc"></i> icon-sort-alpha-desc
+										<i class="fa fa-microphone-slash"></i> fa-microphone-slash
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-sort-amount-asc"></i> icon-sort-amount-asc
+										<i class="fa fa-minus"></i> fa-minus
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-sort-amount-desc"></i> icon-sort-amount-desc
+										<i class="fa fa-minus-circle"></i> fa-minus-circle
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-sort-asc"></i> icon-sort-asc
+										<i class="fa fa-minus-square"></i> fa-minus-square
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-sort-desc"></i> icon-sort-desc
+										<i class="fa fa-minus-square-o"></i> fa-minus-square-o
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-sort-down"></i> icon-sort-down <span class="text-muted">(alias)</span>
+										<i class="fa fa-mobile"></i> fa-mobile
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-sort-numeric-asc"></i> icon-sort-numeric-asc
+										<i class="fa fa-mobile-phone"></i> fa-mobile-phone <span class="text-muted">(alias)</span>
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-sort-numeric-desc"></i> icon-sort-numeric-desc
+										<i class="fa fa-money"></i> fa-money
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-sort-up"></i> icon-sort-up <span class="text-muted">(alias)</span>
+										<i class="fa fa-moon-o"></i> fa-moon-o
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-spinner"></i> icon-spinner
+										<i class="fa fa-mortar-board"></i> fa-mortar-board <span class="text-muted">(alias)</span>
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-square"></i> icon-square
+										<i class="fa fa-music"></i> fa-music
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-square-o"></i> icon-square-o
+										<i class="fa fa-navicon"></i> fa-navicon <span class="text-muted">(alias)</span>
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-star"></i> icon-star
+										<i class="fa fa-newspaper-o"></i> fa-newspaper-o
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-star-half"></i> icon-star-half
+										<i class="fa fa-paint-brush"></i> fa-paint-brush
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-star-half-empty"></i> icon-star-half-empty <span class="text-muted">(alias)</span>
+										<i class="fa fa-paper-plane"></i> fa-paper-plane
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-star-half-full"></i> icon-star-half-full <span class="text-muted">(alias)</span>
+										<i class="fa fa-paper-plane-o"></i> fa-paper-plane-o
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-star-half-o"></i> icon-star-half-o
+										<i class="fa fa-paw"></i> fa-paw
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-star-o"></i> icon-star-o
+										<i class="fa fa-pencil"></i> fa-pencil
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-subscript"></i> icon-subscript
+										<i class="fa fa-pencil-square"></i> fa-pencil-square
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-suitcase"></i> icon-suitcase
+										<i class="fa fa-pencil-square-o"></i> fa-pencil-square-o
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-sun-o"></i> icon-sun-o
+										<i class="fa fa-phone"></i> fa-phone
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-superscript"></i> icon-superscript
+										<i class="fa fa-phone-square"></i> fa-phone-square
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-tablet"></i> icon-tablet
+										<i class="fa fa-photo"></i> fa-photo <span class="text-muted">(alias)</span>
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-tachometer"></i> icon-tachometer
+										<i class="fa fa-picture-o"></i> fa-picture-o
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-tag"></i> icon-tag
+										<i class="fa fa-pie-chart"></i> fa-pie-chart
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-tags"></i> icon-tags
+										<i class="fa fa-plane"></i> fa-plane
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-tasks"></i> icon-tasks
+										<i class="fa fa-plug"></i> fa-plug
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-terminal"></i> icon-terminal
+										<i class="fa fa-plus"></i> fa-plus
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-thumb-tack"></i> icon-thumb-tack
+										<i class="fa fa-plus-circle"></i> fa-plus-circle
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-thumbs-down"></i> icon-thumbs-down
+										<i class="fa fa-plus-square"></i> fa-plus-square
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-thumbs-o-down"></i> icon-thumbs-o-down
+										<i class="fa fa-plus-square-o"></i> fa-plus-square-o
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-thumbs-o-up"></i> icon-thumbs-o-up
+										<i class="fa fa-power-off"></i> fa-power-off
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-thumbs-up"></i> icon-thumbs-up
+										<i class="fa fa-print"></i> fa-print
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-ticket"></i> icon-ticket
+										<i class="fa fa-puzzle-piece"></i> fa-puzzle-piece
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-times"></i> icon-times
+										<i class="fa fa-qrcode"></i> fa-qrcode
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-times-circle"></i> icon-times-circle
+										<i class="fa fa-question"></i> fa-question
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-times-circle-o"></i> icon-times-circle-o
+										<i class="fa fa-question-circle"></i> fa-question-circle
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-tint"></i> icon-tint
+										<i class="fa fa-quote-left"></i> fa-quote-left
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-toggle-down"></i> icon-toggle-down <span class="text-muted">(alias)</span>
+										<i class="fa fa-quote-right"></i> fa-quote-right
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-toggle-left"></i> icon-toggle-left <span class="text-muted">(alias)</span>
+										<i class="fa fa-random"></i> fa-random
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-toggle-right"></i> icon-toggle-right <span class="text-muted">(alias)</span>
+										<i class="fa fa-recycle"></i> fa-recycle
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-toggle-up"></i> icon-toggle-up <span class="text-muted">(alias)</span>
+										<i class="fa fa-refresh"></i> fa-refresh
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-trash-o"></i> icon-trash-o
+										<i class="fa fa-remove"></i> fa-remove <span class="text-muted">(alias)</span>
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-trophy"></i> icon-trophy
+										<i class="fa fa-reorder"></i> fa-reorder <span class="text-muted">(alias)</span>
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-truck"></i> icon-truck
+										<i class="fa fa-reply"></i> fa-reply
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-umbrella"></i> icon-umbrella
+										<i class="fa fa-reply-all"></i> fa-reply-all
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-unlock"></i> icon-unlock
+										<i class="fa fa-retweet"></i> fa-retweet
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-unlock-alt"></i> icon-unlock-alt
+										<i class="fa fa-road"></i> fa-road
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-unsorted"></i> icon-unsorted <span class="text-muted">(alias)</span>
+										<i class="fa fa-rocket"></i> fa-rocket
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-upload"></i> icon-upload
+										<i class="fa fa-rss"></i> fa-rss
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-user"></i> icon-user
+										<i class="fa fa-rss-square"></i> fa-rss-square
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-users"></i> icon-users
+										<i class="fa fa-search"></i> fa-search
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-video-camera"></i> icon-video-camera
+										<i class="fa fa-search-minus"></i> fa-search-minus
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-volume-down"></i> icon-volume-down
+										<i class="fa fa-search-plus"></i> fa-search-plus
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-volume-off"></i> icon-volume-off
+										<i class="fa fa-send"></i> fa-send <span class="text-muted">(alias)</span>
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-volume-up"></i> icon-volume-up
+										<i class="fa fa-send-o"></i> fa-send-o <span class="text-muted">(alias)</span>
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-warning"></i> icon-warning <span class="text-muted">(alias)</span>
+										<i class="fa fa-share"></i> fa-share
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-wheelchair"></i> icon-wheelchair
+										<i class="fa fa-share-alt"></i> fa-share-alt
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-wrench"></i> icon-wrench
+										<i class="fa fa-share-alt-square"></i> fa-share-alt-square
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-share-square"></i> fa-share-square
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-share-square-o"></i> fa-share-square-o
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-shield"></i> fa-shield
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-shopping-cart"></i> fa-shopping-cart
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-sign-in"></i> fa-sign-in
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-sign-out"></i> fa-sign-out
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-signal"></i> fa-signal
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-sitemap"></i> fa-sitemap
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-sliders"></i> fa-sliders
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-smile-o"></i> fa-smile-o
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-soccer-ball-o"></i> fa-soccer-ball-o <span class="text-muted">(alias)</span>
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-sort"></i> fa-sort
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-sort-alpha-asc"></i> fa-sort-alpha-asc
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-sort-alpha-desc"></i> fa-sort-alpha-desc
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-sort-amount-asc"></i> fa-sort-amount-asc
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-sort-amount-desc"></i> fa-sort-amount-desc
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-sort-asc"></i> fa-sort-asc
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-sort-desc"></i> fa-sort-desc
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-sort-down"></i> fa-sort-down <span class="text-muted">(alias)</span>
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-sort-numeric-asc"></i> fa-sort-numeric-asc
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-sort-numeric-desc"></i> fa-sort-numeric-desc
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-sort-up"></i> fa-sort-up <span class="text-muted">(alias)</span>
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-space-shuttle"></i> fa-space-shuttle
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-spinner"></i> fa-spinner
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-spoon"></i> fa-spoon
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-square"></i> fa-square
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-square-o"></i> fa-square-o
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-star"></i> fa-star
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-star-half"></i> fa-star-half
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-star-half-empty"></i> fa-star-half-empty <span class="text-muted">(alias)</span>
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-star-half-full"></i> fa-star-half-full <span class="text-muted">(alias)</span>
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-star-half-o"></i> fa-star-half-o
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-star-o"></i> fa-star-o
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-suitcase"></i> fa-suitcase
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-sun-o"></i> fa-sun-o
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-support"></i> fa-support <span class="text-muted">(alias)</span>
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-tablet"></i> fa-tablet
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-tachometer"></i> fa-tachometer
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-tag"></i> fa-tag
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-tags"></i> fa-tags
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-tasks"></i> fa-tasks
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-taxi"></i> fa-taxi
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-terminal"></i> fa-terminal
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-thumb-tack"></i> fa-thumb-tack
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-thumbs-down"></i> fa-thumbs-down
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-thumbs-o-down"></i> fa-thumbs-o-down
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-thumbs-o-up"></i> fa-thumbs-o-up
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-thumbs-up"></i> fa-thumbs-up
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-ticket"></i> fa-ticket
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-times"></i> fa-times
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-times-circle"></i> fa-times-circle
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-times-circle-o"></i> fa-times-circle-o
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-tint"></i> fa-tint
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-toggle-down"></i> fa-toggle-down <span class="text-muted">(alias)</span>
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-toggle-left"></i> fa-toggle-left <span class="text-muted">(alias)</span>
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-toggle-off"></i> fa-toggle-off
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-toggle-on"></i> fa-toggle-on
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-toggle-right"></i> fa-toggle-right <span class="text-muted">(alias)</span>
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-toggle-up"></i> fa-toggle-up <span class="text-muted">(alias)</span>
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-trash"></i> fa-trash
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-trash-o"></i> fa-trash-o
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-tree"></i> fa-tree
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-trophy"></i> fa-trophy
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-truck"></i> fa-truck
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-tty"></i> fa-tty
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-umbrella"></i> fa-umbrella
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-university"></i> fa-university
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-unlock"></i> fa-unlock
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-unlock-alt"></i> fa-unlock-alt
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-unsorted"></i> fa-unsorted <span class="text-muted">(alias)</span>
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-upload"></i> fa-upload
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-user"></i> fa-user
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-users"></i> fa-users
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-video-camera"></i> fa-video-camera
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-volume-down"></i> fa-volume-down
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-volume-off"></i> fa-volume-off
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-volume-up"></i> fa-volume-up
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-warning"></i> fa-warning <span class="text-muted">(alias)</span>
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-wheelchair"></i> fa-wheelchair
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-wifi"></i> fa-wifi
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-wrench"></i> fa-wrench
+									</div>
+								</div>
+								</section>
+								<section id="file-type">
+								<h2 class="page-header">File Type Icons</h2>
+								<div class="row fontawesome-icon-list">
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-file"></i> fa-file
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-file-archive-o"></i> fa-file-archive-o
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-file-audio-o"></i> fa-file-audio-o
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-file-code-o"></i> fa-file-code-o
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-file-excel-o"></i> fa-file-excel-o
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-file-image-o"></i> fa-file-image-o
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-file-movie-o"></i> fa-file-movie-o <span class="text-muted">(alias)</span>
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-file-o"></i> fa-file-o
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-file-pdf-o"></i> fa-file-pdf-o
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-file-photo-o"></i> fa-file-photo-o <span class="text-muted">(alias)</span>
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-file-picture-o"></i> fa-file-picture-o <span class="text-muted">(alias)</span>
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-file-powerpoint-o"></i> fa-file-powerpoint-o
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-file-sound-o"></i> fa-file-sound-o <span class="text-muted">(alias)</span>
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-file-text"></i> fa-file-text
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-file-text-o"></i> fa-file-text-o
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-file-video-o"></i> fa-file-video-o
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-file-word-o"></i> fa-file-word-o
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-file-zip-o"></i> fa-file-zip-o <span class="text-muted">(alias)</span>
+									</div>
+								</div>
+								</section>
+								<section id="spinner">
+								<h2 class="page-header">Spinner Icons</h2>
+								<div class="alert alert-success">
+									<ul class="fa-ul">
+										<i class="fa fa-info-circle fa-lg fa-li"></i>
+										These icons work great with the <code>fa-spin</code> class. Check out the <a class="alert-link" href="../examples/#spinning">spinning icons example</a>.
+									</ul>
+								</div>
+								<div class="row fontawesome-icon-list">
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-circle-o-notch"></i> fa-circle-o-notch
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-cog"></i> fa-cog
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-gear"></i> fa-gear <span class="text-muted">(alias)</span>
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-refresh"></i> fa-refresh
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-spinner"></i> fa-spinner
 									</div>
 								</div>
 								</section>
@@ -1078,37 +1527,89 @@
 								<h2 class="page-header">Form Control Icons</h2>
 								<div class="row fontawesome-icon-list">
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-check-square"></i> icon-check-square
+										<i class="fa fa-check-square"></i> fa-check-square
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-check-square-o"></i> icon-check-square-o
+										<i class="fa fa-check-square-o"></i> fa-check-square-o
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-circle"></i> icon-circle
+										<i class="fa fa-circle"></i> fa-circle
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-circle-o"></i> icon-circle-o
+										<i class="fa fa-circle-o"></i> fa-circle-o
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-dot-circle-o"></i> icon-dot-circle-o
+										<i class="fa fa-dot-circle-o"></i> fa-dot-circle-o
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-minus-square"></i> icon-minus-square
+										<i class="fa fa-minus-square"></i> fa-minus-square
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-minus-square-o"></i> icon-minus-square-o
+										<i class="fa fa-minus-square-o"></i> fa-minus-square-o
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-plus-square"></i> icon-plus-square
+										<i class="fa fa-plus-square"></i> fa-plus-square
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-plus-square-o"></i> icon-plus-square-o
+										<i class="fa fa-plus-square-o"></i> fa-plus-square-o
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-square"></i> icon-square
+										<i class="fa fa-square"></i> fa-square
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-square-o"></i> icon-square-o
+										<i class="fa fa-square-o"></i> fa-square-o
+									</div>
+								</div>
+								</section>
+								<section id="payment">
+								<h2 class="page-header">Payment Icons</h2>
+								<div class="row fontawesome-icon-list">
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-cc-amex"></i> fa-cc-amex
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-cc-discover"></i> fa-cc-discover
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-cc-mastercard"></i> fa-cc-mastercard
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-cc-paypal"></i> fa-cc-paypal
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-cc-stripe"></i> fa-cc-stripe
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-cc-visa"></i> fa-cc-visa
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-credit-card"></i> fa-credit-card
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-google-wallet"></i> fa-google-wallet
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-paypal"></i> fa-paypal
+									</div>
+								</div>
+								</section>
+								<section id="chart">
+								<h2 class="page-header">Chart Icons</h2>
+								<div class="row fontawesome-icon-list">
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-area-chart"></i> fa-area-chart
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-bar-chart"></i> fa-bar-chart
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-bar-chart-o"></i> fa-bar-chart-o <span class="text-muted">(alias)</span>
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-line-chart"></i> fa-line-chart
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-pie-chart"></i> fa-pie-chart
 									</div>
 								</div>
 								</section>
@@ -1116,67 +1617,76 @@
 								<h2 class="page-header">Currency Icons</h2>
 								<div class="row fontawesome-icon-list">
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-bitcoin"></i> icon-bitcoin <span class="text-muted">(alias)</span>
+										<i class="fa fa-bitcoin"></i> fa-bitcoin <span class="text-muted">(alias)</span>
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-btc"></i> icon-btc
+										<i class="fa fa-btc"></i> fa-btc
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-cny"></i> icon-cny <span class="text-muted">(alias)</span>
+										<i class="fa fa-cny"></i> fa-cny <span class="text-muted">(alias)</span>
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-dollar"></i> icon-dollar <span class="text-muted">(alias)</span>
+										<i class="fa fa-dollar"></i> fa-dollar <span class="text-muted">(alias)</span>
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-eur"></i> icon-eur
+										<i class="fa fa-eur"></i> fa-eur
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-euro"></i> icon-euro <span class="text-muted">(alias)</span>
+										<i class="fa fa-euro"></i> fa-euro <span class="text-muted">(alias)</span>
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-gbp"></i> icon-gbp
+										<i class="fa fa-gbp"></i> fa-gbp
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-inr"></i> icon-inr
+										<i class="fa fa-ils"></i> fa-ils
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-jpy"></i> icon-jpy
+										<i class="fa fa-inr"></i> fa-inr
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-krw"></i> icon-krw
+										<i class="fa fa-jpy"></i> fa-jpy
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-money"></i> icon-money
+										<i class="fa fa-krw"></i> fa-krw
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-rmb"></i> icon-rmb <span class="text-muted">(alias)</span>
+										<i class="fa fa-money"></i> fa-money
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-rouble"></i> icon-rouble <span class="text-muted">(alias)</span>
+										<i class="fa fa-rmb"></i> fa-rmb <span class="text-muted">(alias)</span>
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-rub"></i> icon-rub
+										<i class="fa fa-rouble"></i> fa-rouble <span class="text-muted">(alias)</span>
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-ruble"></i> icon-ruble <span class="text-muted">(alias)</span>
+										<i class="fa fa-rub"></i> fa-rub
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-rupee"></i> icon-rupee <span class="text-muted">(alias)</span>
+										<i class="fa fa-ruble"></i> fa-ruble <span class="text-muted">(alias)</span>
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-try"></i> icon-try
+										<i class="fa fa-rupee"></i> fa-rupee <span class="text-muted">(alias)</span>
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-turkish-lira"></i> icon-turkish-lira <span class="text-muted">(alias)</span>
+										<i class="fa fa-shekel"></i> fa-shekel <span class="text-muted">(alias)</span>
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-usd"></i> icon-usd
+										<i class="fa fa-sheqel"></i> fa-sheqel <span class="text-muted">(alias)</span>
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-won"></i> icon-won <span class="text-muted">(alias)</span>
+										<i class="fa fa-try"></i> fa-try
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-yen"></i> icon-yen <span class="text-muted">(alias)</span>
+										<i class="fa fa-turkish-lira"></i> fa-turkish-lira <span class="text-muted">(alias)</span>
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-usd"></i> fa-usd
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-won"></i> fa-won <span class="text-muted">(alias)</span>
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-yen"></i> fa-yen <span class="text-muted">(alias)</span>
 									</div>
 								</div>
 								</section>
@@ -1184,139 +1694,151 @@
 								<h2 class="page-header">Text Editor Icons</h2>
 								<div class="row fontawesome-icon-list">
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-align-center"></i> icon-align-center
+										<i class="fa fa-align-center"></i> fa-align-center
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-align-justify"></i> icon-align-justify
+										<i class="fa fa-align-justify"></i> fa-align-justify
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-align-left"></i> icon-align-left
+										<i class="fa fa-align-left"></i> fa-align-left
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-align-right"></i> icon-align-right
+										<i class="fa fa-align-right"></i> fa-align-right
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-bold"></i> icon-bold
+										<i class="fa fa-bold"></i> fa-bold
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-chain"></i> icon-chain <span class="text-muted">(alias)</span>
+										<i class="fa fa-chain"></i> fa-chain <span class="text-muted">(alias)</span>
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-chain-broken"></i> icon-chain-broken
+										<i class="fa fa-chain-broken"></i> fa-chain-broken
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-clipboard"></i> icon-clipboard
+										<i class="fa fa-clipboard"></i> fa-clipboard
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-columns"></i> icon-columns
+										<i class="fa fa-columns"></i> fa-columns
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-copy"></i> icon-copy <span class="text-muted">(alias)</span>
+										<i class="fa fa-copy"></i> fa-copy <span class="text-muted">(alias)</span>
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-cut"></i> icon-cut <span class="text-muted">(alias)</span>
+										<i class="fa fa-cut"></i> fa-cut <span class="text-muted">(alias)</span>
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-dedent"></i> icon-dedent <span class="text-muted">(alias)</span>
+										<i class="fa fa-dedent"></i> fa-dedent <span class="text-muted">(alias)</span>
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-eraser"></i> icon-eraser
+										<i class="fa fa-eraser"></i> fa-eraser
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-file"></i> icon-file
+										<i class="fa fa-file"></i> fa-file
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-file-o"></i> icon-file-o
+										<i class="fa fa-file-o"></i> fa-file-o
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-file-text"></i> icon-file-text
+										<i class="fa fa-file-text"></i> fa-file-text
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-file-text-o"></i> icon-file-text-o
+										<i class="fa fa-file-text-o"></i> fa-file-text-o
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-files-o"></i> icon-files-o
+										<i class="fa fa-files-o"></i> fa-files-o
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-floppy-o"></i> icon-floppy-o
+										<i class="fa fa-floppy-o"></i> fa-floppy-o
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-font"></i> icon-font
+										<i class="fa fa-font"></i> fa-font
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-indent"></i> icon-indent
+										<i class="fa fa-header"></i> fa-header
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-italic"></i> icon-italic
+										<i class="fa fa-indent"></i> fa-indent
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-link"></i> icon-link
+										<i class="fa fa-italic"></i> fa-italic
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-list"></i> icon-list
+										<i class="fa fa-link"></i> fa-link
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-list-alt"></i> icon-list-alt
+										<i class="fa fa-list"></i> fa-list
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-list-ol"></i> icon-list-ol
+										<i class="fa fa-list-alt"></i> fa-list-alt
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-list-ul"></i> icon-list-ul
+										<i class="fa fa-list-ol"></i> fa-list-ol
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-outdent"></i> icon-outdent
+										<i class="fa fa-list-ul"></i> fa-list-ul
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-paperclip"></i> icon-paperclip
+										<i class="fa fa-outdent"></i> fa-outdent
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-paste"></i> icon-paste <span class="text-muted">(alias)</span>
+										<i class="fa fa-paperclip"></i> fa-paperclip
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-repeat"></i> icon-repeat
+										<i class="fa fa-paragraph"></i> fa-paragraph
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-rotate-left"></i> icon-rotate-left <span class="text-muted">(alias)</span>
+										<i class="fa fa-paste"></i> fa-paste <span class="text-muted">(alias)</span>
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-rotate-right"></i> icon-rotate-right <span class="text-muted">(alias)</span>
+										<i class="fa fa-repeat"></i> fa-repeat
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-save"></i> icon-save <span class="text-muted">(alias)</span>
+										<i class="fa fa-rotate-left"></i> fa-rotate-left <span class="text-muted">(alias)</span>
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-scissors"></i> icon-scissors
+										<i class="fa fa-rotate-right"></i> fa-rotate-right <span class="text-muted">(alias)</span>
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-strikethrough"></i> icon-strikethrough
+										<i class="fa fa-save"></i> fa-save <span class="text-muted">(alias)</span>
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-table"></i> icon-table
+										<i class="fa fa-scissors"></i> fa-scissors
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-text-height"></i> icon-text-height
+										<i class="fa fa-strikethrough"></i> fa-strikethrough
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-text-width"></i> icon-text-width
+										<i class="fa fa-subscript"></i> fa-subscript
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-th"></i> icon-th
+										<i class="fa fa-superscript"></i> fa-superscript
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-th-large"></i> icon-th-large
+										<i class="fa fa-table"></i> fa-table
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-th-list"></i> icon-th-list
+										<i class="fa fa-text-height"></i> fa-text-height
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-underline"></i> icon-underline
+										<i class="fa fa-text-width"></i> fa-text-width
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-undo"></i> icon-undo
+										<i class="fa fa-th"></i> fa-th
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-unlink"></i> icon-unlink <span class="text-muted">(alias)</span>
+										<i class="fa fa-th-large"></i> fa-th-large
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-th-list"></i> fa-th-list
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-underline"></i> fa-underline
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-undo"></i> fa-undo
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-unlink"></i> fa-unlink <span class="text-muted">(alias)</span>
 									</div>
 								</div>
 								</section>
@@ -1324,160 +1846,160 @@
 								<h2 class="page-header">Directional Icons</h2>
 								<div class="row fontawesome-icon-list">
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-angle-double-down"></i> icon-angle-double-down
+										<i class="fa fa-angle-double-down"></i> fa-angle-double-down
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-angle-double-left"></i> icon-angle-double-left
+										<i class="fa fa-angle-double-left"></i> fa-angle-double-left
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-angle-double-right"></i> icon-angle-double-right
+										<i class="fa fa-angle-double-right"></i> fa-angle-double-right
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-angle-double-up"></i> icon-angle-double-up
+										<i class="fa fa-angle-double-up"></i> fa-angle-double-up
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-angle-down"></i> icon-angle-down
+										<i class="fa fa-angle-down"></i> fa-angle-down
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-angle-left"></i> icon-angle-left
+										<i class="fa fa-angle-left"></i> fa-angle-left
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-angle-right"></i> icon-angle-right
+										<i class="fa fa-angle-right"></i> fa-angle-right
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-angle-up"></i> icon-angle-up
+										<i class="fa fa-angle-up"></i> fa-angle-up
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-arrow-circle-down"></i> icon-arrow-circle-down
+										<i class="fa fa-arrow-circle-down"></i> fa-arrow-circle-down
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-arrow-circle-left"></i> icon-arrow-circle-left
+										<i class="fa fa-arrow-circle-left"></i> fa-arrow-circle-left
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-arrow-circle-o-down"></i> icon-arrow-circle-o-down
+										<i class="fa fa-arrow-circle-o-down"></i> fa-arrow-circle-o-down
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-arrow-circle-o-left"></i> icon-arrow-circle-o-left
+										<i class="fa fa-arrow-circle-o-left"></i> fa-arrow-circle-o-left
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-arrow-circle-o-right"></i> icon-arrow-circle-o-right
+										<i class="fa fa-arrow-circle-o-right"></i> fa-arrow-circle-o-right
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-arrow-circle-o-up"></i> icon-arrow-circle-o-up
+										<i class="fa fa-arrow-circle-o-up"></i> fa-arrow-circle-o-up
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-arrow-circle-right"></i> icon-arrow-circle-right
+										<i class="fa fa-arrow-circle-right"></i> fa-arrow-circle-right
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-arrow-circle-up"></i> icon-arrow-circle-up
+										<i class="fa fa-arrow-circle-up"></i> fa-arrow-circle-up
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-arrow-down"></i> icon-arrow-down
+										<i class="fa fa-arrow-down"></i> fa-arrow-down
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-arrow-left"></i> icon-arrow-left
+										<i class="fa fa-arrow-left"></i> fa-arrow-left
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-arrow-right"></i> icon-arrow-right
+										<i class="fa fa-arrow-right"></i> fa-arrow-right
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-arrow-up"></i> icon-arrow-up
+										<i class="fa fa-arrow-up"></i> fa-arrow-up
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-arrows"></i> icon-arrows
+										<i class="fa fa-arrows"></i> fa-arrows
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-arrows-alt"></i> icon-arrows-alt
+										<i class="fa fa-arrows-alt"></i> fa-arrows-alt
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-arrows-h"></i> icon-arrows-h
+										<i class="fa fa-arrows-h"></i> fa-arrows-h
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-arrows-v"></i> icon-arrows-v
+										<i class="fa fa-arrows-v"></i> fa-arrows-v
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-caret-down"></i> icon-caret-down
+										<i class="fa fa-caret-down"></i> fa-caret-down
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-caret-left"></i> icon-caret-left
+										<i class="fa fa-caret-left"></i> fa-caret-left
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-caret-right"></i> icon-caret-right
+										<i class="fa fa-caret-right"></i> fa-caret-right
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-caret-square-o-down"></i> icon-caret-square-o-down
+										<i class="fa fa-caret-square-o-down"></i> fa-caret-square-o-down
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-caret-square-o-left"></i> icon-caret-square-o-left
+										<i class="fa fa-caret-square-o-left"></i> fa-caret-square-o-left
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-caret-square-o-right"></i> icon-caret-square-o-right
+										<i class="fa fa-caret-square-o-right"></i> fa-caret-square-o-right
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-caret-square-o-up"></i> icon-caret-square-o-up
+										<i class="fa fa-caret-square-o-up"></i> fa-caret-square-o-up
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-caret-up"></i> icon-caret-up
+										<i class="fa fa-caret-up"></i> fa-caret-up
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-chevron-circle-down"></i> icon-chevron-circle-down
+										<i class="fa fa-chevron-circle-down"></i> fa-chevron-circle-down
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-chevron-circle-left"></i> icon-chevron-circle-left
+										<i class="fa fa-chevron-circle-left"></i> fa-chevron-circle-left
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-chevron-circle-right"></i> icon-chevron-circle-right
+										<i class="fa fa-chevron-circle-right"></i> fa-chevron-circle-right
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-chevron-circle-up"></i> icon-chevron-circle-up
+										<i class="fa fa-chevron-circle-up"></i> fa-chevron-circle-up
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-chevron-down"></i> icon-chevron-down
+										<i class="fa fa-chevron-down"></i> fa-chevron-down
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-chevron-left"></i> icon-chevron-left
+										<i class="fa fa-chevron-left"></i> fa-chevron-left
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-chevron-right"></i> icon-chevron-right
+										<i class="fa fa-chevron-right"></i> fa-chevron-right
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-chevron-up"></i> icon-chevron-up
+										<i class="fa fa-chevron-up"></i> fa-chevron-up
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-hand-o-down"></i> icon-hand-o-down
+										<i class="fa fa-hand-o-down"></i> fa-hand-o-down
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-hand-o-left"></i> icon-hand-o-left
+										<i class="fa fa-hand-o-left"></i> fa-hand-o-left
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-hand-o-right"></i> icon-hand-o-right
+										<i class="fa fa-hand-o-right"></i> fa-hand-o-right
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-hand-o-up"></i> icon-hand-o-up
+										<i class="fa fa-hand-o-up"></i> fa-hand-o-up
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-long-arrow-down"></i> icon-long-arrow-down
+										<i class="fa fa-long-arrow-down"></i> fa-long-arrow-down
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-long-arrow-left"></i> icon-long-arrow-left
+										<i class="fa fa-long-arrow-left"></i> fa-long-arrow-left
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-long-arrow-right"></i> icon-long-arrow-right
+										<i class="fa fa-long-arrow-right"></i> fa-long-arrow-right
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-long-arrow-up"></i> icon-long-arrow-up
+										<i class="fa fa-long-arrow-up"></i> fa-long-arrow-up
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-toggle-down"></i> icon-toggle-down <span class="text-muted">(alias)</span>
+										<i class="fa fa-toggle-down"></i> fa-toggle-down <span class="text-muted">(alias)</span>
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-toggle-left"></i> icon-toggle-left <span class="text-muted">(alias)</span>
+										<i class="fa fa-toggle-left"></i> fa-toggle-left <span class="text-muted">(alias)</span>
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-toggle-right"></i> icon-toggle-right <span class="text-muted">(alias)</span>
+										<i class="fa fa-toggle-right"></i> fa-toggle-right <span class="text-muted">(alias)</span>
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-toggle-up"></i> icon-toggle-up <span class="text-muted">(alias)</span>
+										<i class="fa fa-toggle-up"></i> fa-toggle-up <span class="text-muted">(alias)</span>
 									</div>
 								</div>
 								</section>
@@ -1485,52 +2007,52 @@
 								<h2 class="page-header">Video Player Icons</h2>
 								<div class="row fontawesome-icon-list">
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-arrows-alt"></i> icon-arrows-alt
+										<i class="fa fa-arrows-alt"></i> fa-arrows-alt
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-backward"></i> icon-backward
+										<i class="fa fa-backward"></i> fa-backward
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-compress"></i> icon-compress
+										<i class="fa fa-compress"></i> fa-compress
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-eject"></i> icon-eject
+										<i class="fa fa-eject"></i> fa-eject
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-expand"></i> icon-expand
+										<i class="fa fa-expand"></i> fa-expand
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-fast-backward"></i> icon-fast-backward
+										<i class="fa fa-fast-backward"></i> fa-fast-backward
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-fast-forward"></i> icon-fast-forward
+										<i class="fa fa-fast-forward"></i> fa-fast-forward
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-forward"></i> icon-forward
+										<i class="fa fa-forward"></i> fa-forward
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-pause"></i> icon-pause
+										<i class="fa fa-pause"></i> fa-pause
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-play"></i> icon-play
+										<i class="fa fa-play"></i> fa-play
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-play-circle"></i> icon-play-circle
+										<i class="fa fa-play-circle"></i> fa-play-circle
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-play-circle-o"></i> icon-play-circle-o
+										<i class="fa fa-play-circle-o"></i> fa-play-circle-o
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-step-backward"></i> icon-step-backward
+										<i class="fa fa-step-backward"></i> fa-step-backward
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-step-forward"></i> icon-step-forward
+										<i class="fa fa-step-forward"></i> fa-step-forward
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-stop"></i> icon-stop
+										<i class="fa fa-stop"></i> fa-stop
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-youtube-play"></i> icon-youtube-play
+										<i class="fa fa-youtube-play"></i> fa-youtube-play
 									</div>
 								</div>
 								</section>
@@ -1542,147 +2064,312 @@
 										<li>The use of these trademarks does not indicate endorsement of the trademark holder by Font Awesome, nor vice versa.</li>
 									</ul>
 								</div>
+								<div class="alert alert-warning">
+									<i class="fa fa-warning"></i> Warning! Apparently, Adblock Plus can remove Font Awesome brand icons with their "Remove Social Media Buttons" setting. We will not use hacks to force them to display. Please <a class="alert-link" href="https://adblockplus.org/en/bugs">report an issue with Adblock Plus</a> if you believe this to be an error. To work around this, you'll need to modify the social icon class names.
+								</div>
 								<div class="row fontawesome-icon-list">
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-adn"></i> icon-adn
+										<i class="fa fa-adn"></i> fa-adn
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-android"></i> icon-android
+										<i class="fa fa-android"></i> fa-android
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-apple"></i> icon-apple
+										<i class="fa fa-angellist"></i> fa-angellist
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-bitbucket"></i> icon-bitbucket
+										<i class="fa fa-apple"></i> fa-apple
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-bitbucket-square"></i> icon-bitbucket-square
+										<i class="fa fa-behance"></i> fa-behance
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-bitcoin"></i> icon-bitcoin <span class="text-muted">(alias)</span>
+										<i class="fa fa-behance-square"></i> fa-behance-square
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-btc"></i> icon-btc
+										<i class="fa fa-bitbucket"></i> fa-bitbucket
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-css3"></i> icon-css3
+										<i class="fa fa-bitbucket-square"></i> fa-bitbucket-square
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-dribbble"></i> icon-dribbble
+										<i class="fa fa-bitcoin"></i> fa-bitcoin <span class="text-muted">(alias)</span>
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-dropbox"></i> icon-dropbox
+										<i class="fa fa-btc"></i> fa-btc
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-facebook"></i> icon-facebook
+										<i class="fa fa-cc-amex"></i> fa-cc-amex
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-facebook-square"></i> icon-facebook-square
+										<i class="fa fa-cc-discover"></i> fa-cc-discover
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-flickr"></i> icon-flickr
+										<i class="fa fa-cc-mastercard"></i> fa-cc-mastercard
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-foursquare"></i> icon-foursquare
+										<i class="fa fa-cc-paypal"></i> fa-cc-paypal
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-github"></i> icon-github
+										<i class="fa fa-cc-stripe"></i> fa-cc-stripe
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-github-alt"></i> icon-github-alt
+										<i class="fa fa-cc-visa"></i> fa-cc-visa
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-github-square"></i> icon-github-square
+										<i class="fa fa-codepen"></i> fa-codepen
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-gittip"></i> icon-gittip
+										<i class="fa fa-css3"></i> fa-css3
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-google-plus"></i> icon-google-plus
+										<i class="fa fa-delicious"></i> fa-delicious
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-google-plus-square"></i> icon-google-plus-square
+										<i class="fa fa-deviantart"></i> fa-deviantart
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-html5"></i> icon-html5
+										<i class="fa fa-digg"></i> fa-digg
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-instagram"></i> icon-instagram
+										<i class="fa fa-dribbble"></i> fa-dribbble
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-linkedin"></i> icon-linkedin
+										<i class="fa fa-dropbox"></i> fa-dropbox
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-linkedin-square"></i> icon-linkedin-square
+										<i class="fa fa-drupal"></i> fa-drupal
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-linux"></i> icon-linux
+										<i class="fa fa-empire"></i> fa-empire
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-maxcdn"></i> icon-maxcdn
+										<i class="fa fa-facebook"></i> fa-facebook
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-pagelines"></i> icon-pagelines
+										<i class="fa fa-facebook-square"></i> fa-facebook-square
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-pinterest"></i> icon-pinterest
+										<i class="fa fa-flickr"></i> fa-flickr
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-pinterest-square"></i> icon-pinterest-square
+										<i class="fa fa-foursquare"></i> fa-foursquare
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-renren"></i> icon-renren
+										<i class="fa fa-ge"></i> fa-ge <span class="text-muted">(alias)</span>
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-skype"></i> icon-skype
+										<i class="fa fa-git"></i> fa-git
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-stack-exchange"></i> icon-stack-exchange
+										<i class="fa fa-git-square"></i> fa-git-square
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-stack-overflow"></i> icon-stack-overflow
+										<i class="fa fa-github"></i> fa-github
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-trello"></i> icon-trello
+										<i class="fa fa-github-alt"></i> fa-github-alt
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-tumblr"></i> icon-tumblr
+										<i class="fa fa-github-square"></i> fa-github-square
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-tumblr-square"></i> icon-tumblr-square
+										<i class="fa fa-gittip"></i> fa-gittip
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-twitter"></i> icon-twitter
+										<i class="fa fa-google"></i> fa-google
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-twitter-square"></i> icon-twitter-square
+										<i class="fa fa-google-plus"></i> fa-google-plus
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-vimeo-square"></i> icon-vimeo-square
+										<i class="fa fa-google-plus-square"></i> fa-google-plus-square
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-vk"></i> icon-vk
+										<i class="fa fa-google-wallet"></i> fa-google-wallet
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-weibo"></i> icon-weibo
+										<i class="fa fa-hacker-news"></i> fa-hacker-news
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-windows"></i> icon-windows
+										<i class="fa fa-html5"></i> fa-html5
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-xing"></i> icon-xing
+										<i class="fa fa-instagram"></i> fa-instagram
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-xing-square"></i> icon-xing-square
+										<i class="fa fa-ioxhost"></i> fa-ioxhost
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-youtube"></i> icon-youtube
+										<i class="fa fa-joomla"></i> fa-joomla
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-youtube-play"></i> icon-youtube-play
+										<i class="fa fa-jsfiddle"></i> fa-jsfiddle
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-youtube-square"></i> icon-youtube-square
+										<i class="fa fa-lastfm"></i> fa-lastfm
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-lastfm-square"></i> fa-lastfm-square
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-linkedin"></i> fa-linkedin
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-linkedin-square"></i> fa-linkedin-square
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-linux"></i> fa-linux
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-maxcdn"></i> fa-maxcdn
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-meanpath"></i> fa-meanpath
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-openid"></i> fa-openid
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-pagelines"></i> fa-pagelines
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-paypal"></i> fa-paypal
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-pied-piper"></i> fa-pied-piper
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-pied-piper-alt"></i> fa-pied-piper-alt
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-pinterest"></i> fa-pinterest
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-pinterest-square"></i> fa-pinterest-square
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-qq"></i> fa-qq
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-ra"></i> fa-ra <span class="text-muted">(alias)</span>
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-rebel"></i> fa-rebel
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-reddit"></i> fa-reddit
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-reddit-square"></i> fa-reddit-square
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-renren"></i> fa-renren
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-share-alt"></i> fa-share-alt
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-share-alt-square"></i> fa-share-alt-square
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-skype"></i> fa-skype
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-slack"></i> fa-slack
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-slideshare"></i> fa-slideshare
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-soundcloud"></i> fa-soundcloud
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-spotify"></i> fa-spotify
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-stack-exchange"></i> fa-stack-exchange
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-stack-overflow"></i> fa-stack-overflow
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-steam"></i> fa-steam
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-steam-square"></i> fa-steam-square
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-stumbleupon"></i> fa-stumbleupon
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-stumbleupon-circle"></i> fa-stumbleupon-circle
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-tencent-weibo"></i> fa-tencent-weibo
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-trello"></i> fa-trello
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-tumblr"></i> fa-tumblr
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-tumblr-square"></i> fa-tumblr-square
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-twitch"></i> fa-twitch
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-twitter"></i> fa-twitter
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-twitter-square"></i> fa-twitter-square
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-vimeo-square"></i> fa-vimeo-square
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-vine"></i> fa-vine
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-vk"></i> fa-vk
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-wechat"></i> fa-wechat <span class="text-muted">(alias)</span>
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-weibo"></i> fa-weibo
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-weixin"></i> fa-weixin
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-windows"></i> fa-windows
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-wordpress"></i> fa-wordpress
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-xing"></i> fa-xing
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-xing-square"></i> fa-xing-square
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-yahoo"></i> fa-yahoo
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-yelp"></i> fa-yelp
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-youtube"></i> fa-youtube
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-youtube-play"></i> fa-youtube-play
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<i class="fa fa-youtube-square"></i> fa-youtube-square
 									</div>
 								</div>
 								</section>
@@ -1690,28 +2377,28 @@
 								<h2 class="page-header">Medical Icons</h2>
 								<div class="row fontawesome-icon-list">
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-ambulance"></i> icon-ambulance
+										<i class="fa fa-ambulance"></i> fa-ambulance
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-h-square"></i> icon-h-square
+										<i class="fa fa-h-square"></i> fa-h-square
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-hospital-o"></i> icon-hospital-o
+										<i class="fa fa-hospital-o"></i> fa-hospital-o
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-medkit"></i> icon-medkit
+										<i class="fa fa-medkit"></i> fa-medkit
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-plus-square"></i> icon-plus-square
+										<i class="fa fa-plus-square"></i> fa-plus-square
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-stethoscope"></i> icon-stethoscope
+										<i class="fa fa-stethoscope"></i> fa-stethoscope
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-user-md"></i> icon-user-md
+										<i class="fa fa-user-md"></i> fa-user-md
 									</div>
 									<div class="col-md-3 col-sm-4">
-										<i class="icon icon-wheelchair"></i> icon-wheelchair
+										<i class="fa fa-wheelchair"></i> fa-wheelchair
 									</div>
 								</div>
 								</section>
@@ -1749,8 +2436,8 @@
 							</div>
 						</div>
 						<div class="col-md-3">
-							<h4>Latest Tweet</h4>
-							<div id="tweet" class="twitter" data-account-id="">
+							<h4>Latest Tweets</h4>
+							<div id="tweet" class="twitter" data-plugin-tweets data-plugin-options='{"username": "", "count": 2}'>
 								<p>Please wait...</p>
 							</div>
 						</div>
@@ -1758,9 +2445,9 @@
 							<div class="contact-details">
 								<h4>Contact Us</h4>
 								<ul class="contact">
-									<li><p><i class="icon icon-map-marker"></i> <strong>Address:</strong> 1234 Street Name, City Name, United States</p></li>
-									<li><p><i class="icon icon-phone"></i> <strong>Phone:</strong> (123) 456-7890</p></li>
-									<li><p><i class="icon icon-envelope"></i> <strong>Email:</strong> <a href="mailto:mail@example.com">mail@example.com</a></p></li>
+									<li><p><i class="fa fa-map-marker"></i> <strong>Address:</strong> 1234 Street Name, City Name, United States</p></li>
+									<li><p><i class="fa fa-phone"></i> <strong>Phone:</strong> (123) 456-7890</p></li>
+									<li><p><i class="fa fa-envelope"></i> <strong>Email:</strong> <a href="mailto:mail@example.com">mail@example.com</a></p></li>
 								</ul>
 							</div>
 						</div>
@@ -1768,9 +2455,9 @@
 							<h4>Follow Us</h4>
 							<div class="social-icons">
 								<ul class="social-icons">
-									<li class="facebook"><a href="http://www.facebook.com/" target="_blank" data-placement="bottom" rel="tooltip" title="Facebook">Facebook</a></li>
-									<li class="twitter"><a href="http://www.twitter.com/" target="_blank" data-placement="bottom" rel="tooltip" title="Twitter">Twitter</a></li>
-									<li class="linkedin"><a href="http://www.linkedin.com/" target="_blank" data-placement="bottom" rel="tooltip" title="Linkedin">Linkedin</a></li>
+									<li class="facebook"><a href="http://www.facebook.com/" target="_blank" data-placement="bottom" data-tooltip title="Facebook">Facebook</a></li>
+									<li class="twitter"><a href="http://www.twitter.com/" target="_blank" data-placement="bottom" data-tooltip title="Twitter">Twitter</a></li>
+									<li class="linkedin"><a href="http://www.linkedin.com/" target="_blank" data-placement="bottom" data-tooltip title="Linkedin">Linkedin</a></li>
 								</ul>
 							</div>
 						</div>
@@ -1785,7 +2472,7 @@
 								</a>
 							</div>
 							<div class="col-md-7">
-								<p>© Copyright 2014. All Rights Reserved.</p>
+								<p>© Copyright 2015. All Rights Reserved.</p>
 							</div>
 							<div class="col-md-4">
 								<nav id="sub-menu">
@@ -1802,29 +2489,31 @@
 			</footer>
 		</div>
 
-		<!-- Libs -->
-		<script src="vendor/jquery.js"></script>
-		<script src="vendor/jquery.appear.js"></script>
-		<script src="vendor/jquery.easing.js"></script>
-		<script src="vendor/jquery.cookie.js"></script>
-		<script src="vendor/bootstrap/js/bootstrap.js"></script>
-		<script src="vendor/jquery.validate.js"></script>
-		<script src="vendor/jquery.stellar.js"></script>
-		<script src="vendor/jquery.knob.js"></script>
-		<script src="vendor/jquery.gmap.js"></script>
-		<script src="vendor/twitterjs/twitter.js"></script>
+		<!-- Vendor -->
+		<script src="vendor/jquery/jquery.js"></script>
+		<script src="vendor/jquery.appear/jquery.appear.js"></script>
+		<script src="vendor/jquery.easing/jquery.easing.js"></script>
+		<script src="vendor/jquery-cookie/jquery-cookie.js"></script>
+		<script src="vendor/bootstrap/bootstrap.js"></script>
+		<script src="vendor/common/common.js"></script>
+		<script src="vendor/jquery.validation/jquery.validation.js"></script>
+		<script src="vendor/jquery.stellar/jquery.stellar.js"></script>
+		<script src="vendor/jquery.easy-pie-chart/jquery.easy-pie-chart.js"></script>
+		<script src="vendor/jquery.gmap/jquery.gmap.js"></script>
 		<script src="vendor/isotope/jquery.isotope.js"></script>
-		<script src="vendor/owl-carousel/owl.carousel.js"></script>
+		<script src="vendor/owlcarousel/owl.carousel.js"></script>
 		<script src="vendor/jflickrfeed/jflickrfeed.js"></script>
-		<script src="vendor/magnific-popup/magnific-popup.js"></script>
-		<script src="vendor/mediaelement/mediaelement-and-player.js"></script>
+		<script src="vendor/magnific-popup/jquery.magnific-popup.js"></script>
+		<script src="vendor/vide/vide.js"></script>
 		
-		<!-- Theme Initializer -->
-		<script src="js/theme.plugins.js"></script>
+		<!-- Theme Base, Components and Settings -->
 		<script src="js/theme.js"></script>
 		
-		<!-- Custom JS -->
+		<!-- Theme Custom -->
 		<script src="js/custom.js"></script>
+		
+		<!-- Theme Initialization Files -->
+		<script src="js/theme.init.js"></script>
 
 		<!-- Google Analytics: Change UA-XXXXX-X to be your site's ID. Go to http://www.google.com/analytics/ for more information.
 		<script type="text/javascript">

@@ -1,16 +1,16 @@
 /* Header Darken Top Border */
-#header.darken-top-border {
-	> .container {
-		height: 103px;
+@media (min-width: 992px) {
+	#header.darken-top-border {
+		> .container {
+			height: 103px;
+		}
+		ul.nav-main {
+			margin: -11px 0 -8px;
+		}
 	}
-	ul.nav-main {
-		margin: -11px 0 -8px;
-	}
-}
 
-/* Header Darken Top Border - Sticky Menu / Boxed */
-body {
-	&.sticky-menu-active #header.darken-top-border {
+	/* Header Darken Top Border - Sticky Menu / Boxed */
+	body.sticky-menu-active #header.darken-top-border {
 		nav {
 			ul.nav-main {
 				margin-top: 33px;
@@ -23,7 +23,8 @@ body {
 			}
 		}
 	}
-	&.boxed #header.darken-top-border {
+
+	html.boxed #header.darken-top-border {
 		border-top: 0;
 	}
 }

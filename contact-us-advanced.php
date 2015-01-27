@@ -2,12 +2,10 @@
 session_start();
 
 include("php/simple-php-captcha/simple-php-captcha.php");
-include("php/php-mailer/class.phpmailer.php");
+include("php/php-mailer/PHPMailerAutoload.php");
 
 // Step 1 - Enter your email address below.
 $to = 'you@domain.com';
-
-$arrResult = array('response'=>'');
 
 if(isset($_POST['emailSent'])) {
 
@@ -51,7 +49,8 @@ if(isset($_POST['emailSent'])) {
 
 		$mail = new PHPMailer;
 
-		$mail->IsSMTP();
+		$mail->IsSMTP();                                      // Set mailer to use SMTP
+		$mail->SMTPDebug = 0;                                 // Debug Mode
 
 		// Step 4 - If you don't receive the email, try to configure the parameters below:
 
@@ -79,9 +78,9 @@ if(isset($_POST['emailSent'])) {
 		}
 
 		if($mail->Send()) {
-		   $arrResult['response'] = 'success';
+			$arrResult = array('response'=> 'success');
 		} else {
-			$arrResult['response'] = 'error';
+			$arrResult = array('response'=> 'error', 'error'=> $mail->ErrorInfo);
 		}
 
 	} else {
@@ -93,14 +92,12 @@ if(isset($_POST['emailSent'])) {
 }
 ?>
 <!DOCTYPE html>
-<!--[if IE 8]>			<html class="ie ie8"> <![endif]-->
-<!--[if IE 9]>			<html class="ie ie9"> <![endif]-->
-<!--[if gt IE 9]><!-->	<html> <!--<![endif]-->
+<html>
 	<head>
 
 		<!-- Basic -->
 		<meta charset="utf-8">
-		<title>Contact Us Advanced | Porto - Responsive HTML5 Template 3.1.0</title>		
+		<title>Contact Us Advanced | Porto - Responsive HTML5 Template 3.4.1</title>		
 		<meta name="keywords" content="HTML5 Template" />
 		<meta name="description" content="Porto - Responsive HTML5 Template">
 		<meta name="author" content="okler.net">
@@ -111,14 +108,12 @@ if(isset($_POST['emailSent'])) {
 		<!-- Web Fonts  -->
 		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light" rel="stylesheet" type="text/css">
 
-		<!-- Libs CSS -->
-		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css">
-		<link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.css">
-		<link rel="stylesheet" href="vendor/owl-carousel/owl.carousel.css" media="screen">
-		<link rel="stylesheet" href="vendor/owl-carousel/owl.theme.css" media="screen">
+		<!-- Vendor CSS -->
+		<link rel="stylesheet" href="vendor/bootstrap/bootstrap.css">
+		<link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.css">
+		<link rel="stylesheet" href="vendor/owlcarousel/owl.carousel.css" media="screen">
+		<link rel="stylesheet" href="vendor/owlcarousel/owl.theme.css" media="screen">
 		<link rel="stylesheet" href="vendor/magnific-popup/magnific-popup.css" media="screen">
-		<link rel="stylesheet" href="vendor/isotope/jquery.isotope.css" media="screen">
-		<link rel="stylesheet" href="vendor/mediaelement/mediaelementplayer.css" media="screen">
 
 		<!-- Theme CSS -->
 		<link rel="stylesheet" href="css/theme.css">
@@ -127,24 +122,22 @@ if(isset($_POST['emailSent'])) {
 		<link rel="stylesheet" href="css/theme-shop.css">
 		<link rel="stylesheet" href="css/theme-animate.css">
 
-		<!-- Responsive CSS -->
-		<link rel="stylesheet" href="css/theme-responsive.css" />
-
 		<!-- Skin CSS -->
 		<link rel="stylesheet" href="css/skins/default.css">
 
-		<!-- Custom CSS -->
+		<!-- Theme Custom CSS -->
 		<link rel="stylesheet" href="css/custom.css">
 
 		<!-- Head Libs -->
-		<script src="vendor/modernizr.js"></script>
+		<script src="vendor/modernizr/modernizr.js"></script>
 
 		<!--[if IE]>
 			<link rel="stylesheet" href="css/ie.css">
 		<![endif]-->
 
 		<!--[if lte IE 8]>
-			<script src="vendor/respond.js"></script>
+			<script src="vendor/respond/respond.js"></script>
+			<script src="vendor/excanvas/excanvas.js"></script>
 		<![endif]-->
 
 	</head>
@@ -161,9 +154,9 @@ if(isset($_POST['emailSent'])) {
 					<div class="search">
 						<form id="searchForm" action="page-search-results.html" method="get">
 							<div class="input-group">
-								<input type="text" class="form-control search" name="q" id="q" placeholder="Search...">
+								<input type="text" class="form-control search" name="q" id="q" placeholder="Search..." required>
 								<span class="input-group-btn">
-									<button class="btn btn-default" type="submit"><i class="icon icon-search"></i></button>
+									<button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
 								</span>
 							</div>
 						</form>
@@ -171,18 +164,18 @@ if(isset($_POST['emailSent'])) {
 					<nav>
 						<ul class="nav nav-pills nav-top">
 							<li>
-								<a href="about-us.html"><i class="icon icon-angle-right"></i>About Us</a>
+								<a href="about-us.html"><i class="fa fa-angle-right"></i>About Us</a>
 							</li>
 							<li>
-								<a href="contact-us.html"><i class="icon icon-angle-right"></i>Contact Us</a>
+								<a href="contact-us.html"><i class="fa fa-angle-right"></i>Contact Us</a>
 							</li>
 							<li class="phone">
-								<span><i class="icon icon-phone"></i>(123) 456-7890</span>
+								<span><i class="fa fa-phone"></i>(123) 456-7890</span>
 							</li>
 						</ul>
 					</nav>
 					<button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse">
-						<i class="icon icon-bars"></i>
+						<i class="fa fa-bars"></i>
 					</button>
 				</div>
 				<div class="navbar-collapse nav-main-collapse collapse">
@@ -197,7 +190,7 @@ if(isset($_POST['emailSent'])) {
 								<li class="dropdown">
 									<a class="dropdown-toggle" href="#">
 										Home
-										<i class="icon icon-angle-down"></i>
+										<i class="fa fa-angle-down"></i>
 									</a>
 									<ul class="dropdown-menu">
 										<li class="dropdown-submenu">
@@ -221,7 +214,7 @@ if(isset($_POST['emailSent'])) {
 								<li class="dropdown">
 									<a class="dropdown-toggle" href="#">
 										About Us
-										<i class="icon icon-angle-down"></i>
+										<i class="fa fa-angle-down"></i>
 									</a>
 									<ul class="dropdown-menu">
 										<li><a href="about-us.html">About Us</a></li>
@@ -232,7 +225,7 @@ if(isset($_POST['emailSent'])) {
 								<li class="dropdown mega-menu-item mega-menu-fullwidth">
 									<a class="dropdown-toggle" href="#">
 										Features
-										<i class="icon icon-angle-down"></i>
+										<i class="fa fa-angle-down"></i>
 									</a>
 									<ul class="dropdown-menu">
 										<li>
@@ -286,13 +279,17 @@ if(isset($_POST['emailSent'])) {
 													<div class="col-md-3">
 														<ul class="sub-menu">
 															<li>
-																<span class="mega-menu-sub-title">Blog</span>
+																<span class="mega-menu-sub-title">Admin Extension <em class="not-included">(Not Included)</em></span>
 																<ul class="sub-menu">
-																	<li><a href="blog-full-width.html">Blog Full Width</a></li>
-																	<li><a href="blog-large-image.html">Blog Large Image</a></li>
-																	<li><a href="blog-medium-image.html">Blog Medium Image</a></li>
-																	<li><a href="blog-timeline.html">Blog Timeline</a></li>
-																	<li><a href="blog-post.html">Single Post</a></li>
+																	<li><a href="feature-admin-forms-basic.html">Forms Basic</a></li>
+																	<li><a href="feature-admin-forms-advanced.html">Forms Advanced</a></li>
+																	<li><a href="feature-admin-forms-wizard.html">Forms Wizard</a></li>
+																	<li><a href="feature-admin-forms-code-editor.html">Code Editor</a></li>
+																	<li><a href="feature-admin-tables-advanced.html">Tables Advanced</a></li>
+																	<li><a href="feature-admin-tables-responsive.html">Tables Responsive</a></li>
+																	<li><a href="feature-admin-tables-editable.html">Tables Editable</a></li>
+																	<li><a href="feature-admin-tables-ajax.html">Tables Ajax</a></li>
+																	<li><a href="feature-admin-charts.html">Charts</a></li>
 																</ul>
 															</li>
 														</ul>
@@ -305,7 +302,7 @@ if(isset($_POST['emailSent'])) {
 								<li class="dropdown">
 									<a class="dropdown-toggle" href="#">
 										Portfolio
-										<i class="icon icon-angle-down"></i>
+										<i class="fa fa-angle-down"></i>
 									</a>
 									<ul class="dropdown-menu">
 										<li><a href="portfolio-4-columns.html">4 Columns</a></li>
@@ -320,7 +317,7 @@ if(isset($_POST['emailSent'])) {
 								<li class="dropdown">
 									<a class="dropdown-toggle" href="#">
 										Pages
-										<i class="icon icon-angle-down"></i>
+										<i class="fa fa-angle-down"></i>
 									</a>
 									<ul class="dropdown-menu">
 										<li class="dropdown-submenu">
@@ -333,6 +330,16 @@ if(isset($_POST['emailSent'])) {
 												<li><a href="shop-cart.html">Shop - Cart</a></li>
 												<li><a href="shop-login.html">Shop - Login</a></li>
 												<li><a href="shop-checkout.html">Shop - Checkout</a></li>
+											</ul>
+										</li>
+										<li class="dropdown-submenu">
+											<a href="#">Blog</a>
+											<ul class="dropdown-menu">
+												<li><a href="blog-full-width.html">Blog Full Width</a></li>
+												<li><a href="blog-large-image.html">Blog Large Image</a></li>
+												<li><a href="blog-medium-image.html">Blog Medium Image</a></li>
+												<li><a href="blog-timeline.html">Blog Timeline</a></li>
+												<li><a href="blog-post.html">Single Post</a></li>
 											</ul>
 										</li>
 										<li><a href="page-full-width.html">Full width</a></li>
@@ -351,7 +358,7 @@ if(isset($_POST['emailSent'])) {
 								<li class="dropdown active">
 									<a class="dropdown-toggle" href="#">
 										Contact Us
-										<i class="icon icon-angle-down"></i>
+										<i class="fa fa-angle-down"></i>
 									</a>
 									<ul class="dropdown-menu">
 										<li><a href="contact-us.html">Contact Us - Basic</a></li>
@@ -395,39 +402,41 @@ if(isset($_POST['emailSent'])) {
 							<div class="offset-anchor" id="contact-sent"></div>
 
 							<?php
-							if($arrResult['response'] == 'success') {
-							?>
-							<div class="alert alert-success" id="contactSuccess">
-								<strong>Success!</strong> Your message has been sent to us.
-							</div>
-							<?php
-							} else if($arrResult['response'] == 'error') {
-							?>
-							<div class="alert alert-danger" id="contactError">
-								<strong>Error!</strong> There was an error sending your message.
-							</div>
-							<?php
-							} else if($arrResult['response'] == 'captchaError') {
-							?>
-							<div class="alert alert-danger" id="contactError">
-								<strong>Error!</strong> Verificantion failed.
-							</div>
-							<?php
+							if (isset($arrResult)) {
+								if($arrResult['response'] == 'success') {
+								?>
+								<div class="alert alert-success" id="contactSuccess">
+									<strong>Success!</strong> Your message has been sent to us.
+								</div>
+								<?php
+								} else if($arrResult['response'] == 'error') {
+								?>
+								<div class="alert alert-danger" id="contactError">
+									<strong>Error!</strong> There was an error sending your message. (<?php echo $arrResult['error'];?>)
+								</div>
+								<?php
+								} else if($arrResult['response'] == 'captchaError') {
+								?>
+								<div class="alert alert-danger" id="contactError">
+									<strong>Error!</strong> Verificantion failed.
+								</div>
+								<?php
+								}
 							}
 							?>
 
 							<h2 class="short"><strong>Contact</strong> Us</h2>
-							<form id="contactForm" action="contact-us-advanced.php#contact-sent" method="POST" enctype="multipart/form-data" data-type="advanced">
+							<form id="contactFormAdvanced" action="contact-us-advanced.php#contact-sent" method="POST" enctype="multipart/form-data">
 								<input type="hidden" value="true" name="emailSent" id="emailSent">
 								<div class="row">
 									<div class="form-group">
 										<div class="col-md-6">
 											<label>Your name *</label>
-											<input type="text" value="" data-msg-required="Please enter your name." maxlength="100" class="form-control" name="name" id="name">
+											<input type="text" value="" data-msg-required="Please enter your name." maxlength="100" class="form-control" name="name" id="name" required>
 										</div>
 										<div class="col-md-6">
 											<label>Your email address *</label>
-											<input type="email" value="" data-msg-required="Please enter your email address." data-msg-email="Please enter a valid email address." maxlength="100" class="form-control" name="email" id="email">
+											<input type="email" value="" data-msg-required="Please enter your email address." data-msg-email="Please enter a valid email address." maxlength="100" class="form-control" name="email" id="email" required>
 										</div>
 									</div>
 								</div>
@@ -435,7 +444,7 @@ if(isset($_POST['emailSent'])) {
 									<div class="form-group">
 										<div class="col-md-12">
 											<label>Subject</label>
-											<select data-msg-required="Please enter the subject." class="form-control" name="subject" id="subject">
+											<select data-msg-required="Please enter the subject." class="form-control" name="subject" id="subject" required>
 												<option value=""></option>
 												<option value="Option 1">Option 1</option>
 												<option value="Option 2">Option 2</option>
@@ -455,21 +464,23 @@ if(isset($_POST['emailSent'])) {
 											</div>
 											<div class="row">
 												<div class="col-md-12">
-													<label class="checkbox-inline">
-														<input type="checkbox" name="checkboxes[]" id="inlineCheckbox1" value="option1"> 1
-													</label>
-													<label class="checkbox-inline">
-														<input type="checkbox" name="checkboxes[]" id="inlineCheckbox2" value="option2"> 2
-													</label>
-													<label class="checkbox-inline">
-														<input type="checkbox" name="checkboxes[]" id="inlineCheckbox3" value="option3"> 3
-													</label>
-													<label class="checkbox-inline">
-														<input type="checkbox" name="checkboxes[]" id="inlineCheckbox2" value="option4"> 4
-													</label>
-													<label class="checkbox-inline">
-														<input type="checkbox" name="checkboxes[]" id="inlineCheckbox3" value="option5"> 5
-													</label>
+													<div class="checkbox-group" data-msg-required="Please select at least one option.">
+														<label class="checkbox-inline">
+															<input type="checkbox" name="checkboxes[]" id="inlineCheckbox1" value="option1"> 1
+														</label>
+														<label class="checkbox-inline">
+															<input type="checkbox" name="checkboxes[]" id="inlineCheckbox2" value="option2"> 2
+														</label>
+														<label class="checkbox-inline">
+															<input type="checkbox" name="checkboxes[]" id="inlineCheckbox3" value="option3"> 3
+														</label>
+														<label class="checkbox-inline">
+															<input type="checkbox" name="checkboxes[]" id="inlineCheckbox2" value="option4"> 4
+														</label>
+														<label class="checkbox-inline">
+															<input type="checkbox" name="checkboxes[]" id="inlineCheckbox3" value="option5"> 5
+														</label>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -481,21 +492,23 @@ if(isset($_POST['emailSent'])) {
 											</div>
 											<div class="row">
 												<div class="col-md-12">
-													<label class="radio-inline">
-														<input type="radio" name="radios" id="inlineRadio1" value="option1" checked="checked"> 1
-													</label>
-													<label class="radio-inline">
-														<input type="radio" name="radios" id="inlineRadio2" value="option2"> 2
-													</label>
-													<label class="radio-inline">
-														<input type="radio" name="radios" id="inlineRadio3" value="option3"> 3
-													</label>
-													<label class="radio-inline">
-														<input type="radio" name="radios" id="inlineRadio2" value="option4"> 4
-													</label>
-													<label class="radio-inline">
-														<input type="radio" name="radios" id="inlineRadio3" value="option5"> 5
-													</label>
+													<div class="radio-group" data-msg-required="Please select one option.">
+														<label class="radio-inline">
+															<input type="radio" name="radios" id="inlineRadio1" value="option1"> 1
+														</label>
+														<label class="radio-inline">
+															<input type="radio" name="radios" id="inlineRadio2" value="option2"> 2
+														</label>
+														<label class="radio-inline">
+															<input type="radio" name="radios" id="inlineRadio3" value="option3"> 3
+														</label>
+														<label class="radio-inline">
+															<input type="radio" name="radios" id="inlineRadio2" value="option4"> 4
+														</label>
+														<label class="radio-inline">
+															<input type="radio" name="radios" id="inlineRadio3" value="option5"> 5
+														</label>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -513,7 +526,7 @@ if(isset($_POST['emailSent'])) {
 									<div class="form-group">
 										<div class="col-md-12">
 											<label>Message *</label>
-											<textarea maxlength="5000" data-msg-required="Please enter your message." rows="10" class="form-control" name="message" id="message"></textarea>
+											<textarea maxlength="5000" data-msg-required="Please enter your message." rows="10" class="form-control" name="message" id="message" required></textarea>
 										</div>
 									</div>
 								</div>
@@ -544,7 +557,7 @@ if(isset($_POST['emailSent'])) {
 											</div>
 										</div>
 										<div class="col-md-8">
-											<input type="text" value="" maxlength="6" data-msg-captcha="Wrong verification code." data-msg-required="Please enter the verification code." placeholder="Type the verification code." class="form-control" name="captcha" id="captcha">
+											<input type="text" value="" maxlength="6" data-msg-captcha="Wrong verification code." data-msg-required="Please enter the verification code." placeholder="Type the verification code." class="form-control input-lg captcha-input" name="captcha" id="captcha" required>
 										</div>
 									</div>
 								</div>
@@ -569,18 +582,18 @@ if(isset($_POST['emailSent'])) {
 
 							<h4>The <strong>Office</strong></h4>
 							<ul class="list-unstyled">
-								<li><i class="icon icon-map-marker"></i> <strong>Address:</strong> 1234 Street Name, City Name, United States</li>
-								<li><i class="icon icon-phone"></i> <strong>Phone:</strong> (123) 456-7890</li>
-								<li><i class="icon icon-envelope"></i> <strong>Email:</strong> <a href="mailto:mail@example.com">mail@example.com</a></li>
+								<li><i class="fa fa-map-marker"></i> <strong>Address:</strong> 1234 Street Name, City Name, United States</li>
+								<li><i class="fa fa-phone"></i> <strong>Phone:</strong> (123) 456-7890</li>
+								<li><i class="fa fa-envelope"></i> <strong>Email:</strong> <a href="mailto:mail@example.com">mail@example.com</a></li>
 							</ul>
 
 							<hr />
 
 							<h4>Business <strong>Hours</strong></h4>
 							<ul class="list-unstyled">
-								<li><i class="icon icon-time"></i> Monday - Friday 9am to 5pm</li>
-								<li><i class="icon icon-time"></i> Saturday - 9am to 2pm</li>
-								<li><i class="icon icon-time"></i> Sunday - Closed</li>
+								<li><i class="fa fa-time"></i> Monday - Friday 9am to 5pm</li>
+								<li><i class="fa fa-time"></i> Saturday - 9am to 2pm</li>
+								<li><i class="fa fa-time"></i> Sunday - Closed</li>
 							</ul>
 
 						</div>
@@ -618,8 +631,8 @@ if(isset($_POST['emailSent'])) {
 							</div>
 						</div>
 						<div class="col-md-3">
-							<h4>Latest Tweet</h4>
-							<div id="tweet" class="twitter" data-account-id="">
+							<h4>Latest Tweets</h4>
+							<div id="tweet" class="twitter" data-plugin-tweets data-plugin-options='{"username": "", "count": 2}'>
 								<p>Please wait...</p>
 							</div>
 						</div>
@@ -627,9 +640,9 @@ if(isset($_POST['emailSent'])) {
 							<div class="contact-details">
 								<h4>Contact Us</h4>
 								<ul class="contact">
-									<li><p><i class="icon icon-map-marker"></i> <strong>Address:</strong> 1234 Street Name, City Name, United States</p></li>
-									<li><p><i class="icon icon-phone"></i> <strong>Phone:</strong> (123) 456-7890</p></li>
-									<li><p><i class="icon icon-envelope"></i> <strong>Email:</strong> <a href="mailto:mail@example.com">mail@example.com</a></p></li>
+									<li><p><i class="fa fa-map-marker"></i> <strong>Address:</strong> 1234 Street Name, City Name, United States</p></li>
+									<li><p><i class="fa fa-phone"></i> <strong>Phone:</strong> (123) 456-7890</p></li>
+									<li><p><i class="fa fa-envelope"></i> <strong>Email:</strong> <a href="mailto:mail@example.com">mail@example.com</a></p></li>
 								</ul>
 							</div>
 						</div>
@@ -671,32 +684,35 @@ if(isset($_POST['emailSent'])) {
 			</footer>
 		</div>
 
-		<!-- Libs -->
-		<script src="vendor/jquery.js"></script>
-		<script src="vendor/jquery.appear.js"></script>
-		<script src="vendor/jquery.easing.js"></script>
-		<script src="vendor/jquery.cookie.js"></script>
-		<script src="vendor/bootstrap/js/bootstrap.js"></script>
-		<script src="vendor/jquery.validate.js"></script>
-		<script src="vendor/jquery.stellar.js"></script>
-		<script src="vendor/jquery.knob.js"></script>
-		<script src="vendor/jquery.gmap.js"></script>
+		<!-- Vendor -->
+		<script src="vendor/jquery/jquery.js"></script>
+		<script src="vendor/jquery.appear/jquery.appear.js"></script>
+		<script src="vendor/jquery.easing/jquery.easing.js"></script>
+		<script src="vendor/jquery-cookie/jquery-cookie.js"></script>
+		<script src="vendor/bootstrap/bootstrap.js"></script>
+		<script src="vendor/common/common.js"></script>
+		<script src="vendor/jquery.validation/jquery.validation.js"></script>
+		<script src="vendor/jquery.stellar/jquery.stellar.js"></script>
+		<script src="vendor/jquery.easy-pie-chart/jquery.easy-pie-chart.js"></script>
+		<script src="vendor/jquery.gmap/jquery.gmap.js"></script>
 		<script src="vendor/twitterjs/twitter.js"></script>
 		<script src="vendor/isotope/jquery.isotope.js"></script>
-		<script src="vendor/owl-carousel/owl.carousel.js"></script>
+		<script src="vendor/owlcarousel/owl.carousel.js"></script>
 		<script src="vendor/jflickrfeed/jflickrfeed.js"></script>
-		<script src="vendor/magnific-popup/magnific-popup.js"></script>
-		<script src="vendor/mediaelement/mediaelement-and-player.js"></script>
+		<script src="vendor/magnific-popup/jquery.magnific-popup.js"></script>
+		<script src="vendor/vide/vide.js"></script>
 		
-		<!-- Theme Initializer -->
-		<script src="js/theme.plugins.js"></script>
+		<!-- Theme Base, Components and Settings -->
 		<script src="js/theme.js"></script>
 
-		<!-- Current Page JS -->
+		<!-- Specific Page Vendor and Views -->
 		<script src="js/views/view.contact.js"></script>
 		
-		<!-- Custom JS -->
+		<!-- Theme Custom -->
 		<script src="js/custom.js"></script>
+		
+		<!-- Theme Initialization Files -->
+		<script src="js/theme.init.js"></script>
 
 		<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
 		<script>
@@ -744,6 +760,7 @@ if(isset($_POST['emailSent'])) {
 			// Map Extended Settings
 			var mapSettings = {
 				controls: {
+					draggable: true,
 					panControl: true,
 					zoomControl: true,
 					mapTypeControl: true,

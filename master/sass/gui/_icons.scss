@@ -6,7 +6,7 @@
 	display: inline-block;
 	height: 35px;
 	line-height: 35px;
-	margin-right: 10px;
+	margin-#{$right}: 10px;
 	position: relative;
 	text-align: center;
 	top: 5px;
@@ -21,7 +21,17 @@
 /* Icons List */
 ul.icons {
 	list-style: none;
-	[class^="icon-"] {
-		margin-right: 5px;
+	[class^="fa-"] {
+		margin-#{$right}: 5px;
 	}
+}
+
+/* Font Awesome List */
+.fontawesome-icon-list {
+	[class*="col-md-"] {
+    	margin-bottom: 9px;
+    }
+    > section {
+    	margin-top: 25px;
+    }
 }

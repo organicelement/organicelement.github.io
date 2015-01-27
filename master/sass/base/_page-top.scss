@@ -8,7 +8,7 @@
 	padding: 0;
 	padding: 20px 0;
 	position: relative;
-	text-align: left;
+	text-align: $left;
 	ul.breadcrumb {
 		background: none;
 		margin: -3px 0 0;
@@ -17,13 +17,14 @@
 			text-shadow: none;
 		}
 	}
-	h2 {
+	h1 {
 		border-bottom: 5px solid #CCC;
 		color: #FFF;
 		display: inline-block;
 		font-weight: 200;
 		margin: 0 0 -25px;
 		min-height: 37px;
+		font-size: 2.6em;
 		line-height: 46px;
 		padding: 0 0 17px;
 		position: relative;
@@ -37,6 +38,7 @@
 		background-repeat: repeat;
 		background-color: #999;
 		border-top: 5px solid #888;
+		overflow: hidden;
 		.row {
 			position: relative;
 		}
@@ -44,13 +46,26 @@
 			color: #E8E8E8;
 		}
 		img {
-			bottom: -20px;
+			bottom: -47px;
 			position: relative;
 		}
 		h1 {
 			color: #FFF;
 			margin-bottom: 10px;
 			margin-top: 30px;
+			border: 0;
 		}
 	}
+}
+
+/* Responsive */
+@media (max-width: 479px) {
+
+	.page-top {
+		padding: 16px 0;
+		h1 {
+			line-height: 37px;
+		}
+	}
+
 }
