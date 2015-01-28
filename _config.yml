@@ -27,8 +27,11 @@ markdown: kramdown
 #lang: en
 
 sass:
-    sass_dir: master/sass
+#    sass_dir: master/sass
     style: :compressed
+    load_paths:
+    - "master/sass"
+    - "custom/sass"
 
 paginate: 1
 paginate_path: "/blog/page:num"
