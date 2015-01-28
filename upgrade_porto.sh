@@ -1,12 +1,16 @@
 #!/bin/sh
 #mkdir -p porto
 
+cp ./index.html custom/index.html.bak;
+cp -R master/sass/custom/ custom/sass;
 cp ../porto/HTML/*.html .;
 cp -R ../porto/HTML/video .;
 cp -R ../porto/HTML/vendor .;
 cp -R ../porto/HTML/js .;
 cp -R ../porto/HTML/img .;
 cp -R ../porto/HTML/master .;
+cp custom/index.html.bak ./index.html;
+cp -R custom/sass/ master/sass/custom;
 
 newdir="css"
 mkdir -p $newdir

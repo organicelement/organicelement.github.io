@@ -5,4 +5,5 @@ Only edit in the following directories:
 - _posts
 - blog
 - css/skins
-- master/sass/
+- master/sass/custom
+- custom/*
