@@ -1,0 +1,243 @@
+---
+layout: default
+---
+<section class="page-top">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="breadcrumb">
+                    <li><a href="#">Home</a></li>
+                    <li class="active">Blog</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Medium Image</h1>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+
+<div class="row">
+<div class="col-md-9">
+    <div class="blog-posts">
+        {% for post in paginator.posts %}
+        <article class="post post-medium">
+            <div class="row">
+
+                <div class="col-md-5">
+                    <div class="post-image">
+                        <div class="owl-carousel" data-plugin-options='{"items":1}'>
+                            <div>
+                                <div class="img-thumbnail">
+                                    <img class="img-responsive" src="/img/blog/blog-image-1.jpg" alt="">
+                                </div>
+                            </div>
+                            <div>
+                                <div class="img-thumbnail">
+                                    <img class="img-responsive" src="/img/blog/blog-image-2.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7">
+
+                    <div class="post-content">
+
+                        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+                        {{ post.excerpt }}
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="post-meta">
+                        <span><i class="fa fa-calendar"></i>{{ post.date | date: "%B %d, %Y" }}</span>
+                        <span><i class="fa fa-user"></i> By <a href="#">{{ post.author }}</a> </span>
+                        <span><i class="fa fa-tag"></i> <a href="#">{{ post.categories }}</a></span>
+                        <span><i class="fa fa-comments"></i> <a href="#">12 Comments</a></span>
+                        <a href="{{ post.url }}" class="btn btn-xs btn-primary pull-right">Read more...</a>
+                    </div>
+                </div>
+            </div>
+
+        </article>
+        {% endfor %}
+        <ul class="pagination pagination-lg pull-right">
+            {% for i in (1..paginator.total_pages) %}
+            {% if forloop.first %}
+            <li><a href="{{ paginator.previous_page_path }}">«</a></li>
+            {% endif %}
+            {% if forloop.index == paginator.page %}
+            {% if forloop.index == 1 %}
+            <li class="active"><a href="/blog/">{{ i }}</a></li>
+            {% else %}
+            <li class="active"><a href="/blog/page{{ i }}">{{ i }}</a></li>
+            {% endif %}
+            {% else %}
+            {% if forloop.index == 1 %}
+            <li><a href="/blog/">{{ i }}</a></li>
+            {% else %}
+            <li><a href="/blog/page{{ i }}">{{ i }}</a></li>
+            {% endif %}
+            {% endif %}
+            {% if forloop.last %}
+            <li><a href="{{ paginator.next_page_path }}">»</a></li>
+            {% endif %}
+            {% endfor %}
+        </ul>
+
+    </div>
+</div>
+
+<div class="col-md-3">
+    <aside class="sidebar">
+
+        <form>
+            <div class="input-group input-group-lg">
+                <input class="form-control" placeholder="Search..." name="s" id="s" type="text">
+										<span class="input-group-btn">
+											<button type="submit" class="btn btn-primary btn-lg"><i class="fa fa-search"></i></button>
+										</span>
+            </div>
+        </form>
+
+        <hr />
+
+        <h4>Categories</h4>
+        <ul class="nav nav-list primary push-bottom">
+            {% for category in site.categories %}
+            <li><a href={{ category | first }}>{{ category | first }}</a></li>
+            {% endfor %}
+        </ul>
+
+        <h4>Tags</h4>
+        <ul class="nav nav-list primary push-bottom">
+            {% for tag in site.tags %}
+            <li><a href={{ tag | first }}>{{ tag | first }}</a></li>
+            {% endfor %}
+        </ul>
+
+        <div class="tabs">
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#popularPosts" data-toggle="tab"><i class="fa fa-star"></i> Popular</a></li>
+                <li><a href="#recentPosts" data-toggle="tab">Recent</a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="popularPosts">
+                    <ul class="simple-post-list">
+                        <li>
+                            <div class="post-image">
+                                <div class="img-thumbnail">
+                                    <a href="blog-single.html">
+                                        <img src="/img/blog/blog-thumb-1.jpg" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="post-info">
+                                <a href="blog-single.html">Nullam Vitae Nibh Un Odiosters</a>
+                                <div class="post-meta">
+                                    Jan 10, 2013
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="post-image">
+                                <div class="img-thumbnail">
+                                    <a href="blog-single.html">
+                                        <img src="/img/blog/blog-thumb-2.jpg" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="post-info">
+                                <a href="blog-single.html">Vitae Nibh Un Odiosters</a>
+                                <div class="post-meta">
+                                    Jan 10, 2013
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="post-image">
+                                <div class="img-thumbnail">
+                                    <a href="blog-single.html">
+                                        <img src="/img/blog/blog-thumb-3.jpg" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="post-info">
+                                <a href="blog-single.html">Odiosters Nullam Vitae</a>
+                                <div class="post-meta">
+                                    Jan 10, 2013
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-pane" id="recentPosts">
+                    <ul class="simple-post-list">
+                        <li>
+                            <div class="post-image">
+                                <div class="img-thumbnail">
+                                    <a href="blog-single.html">
+                                        <img src="/img/blog/blog-thumb-2.jpg" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="post-info">
+                                <a href="blog-single.html">Vitae Nibh Un Odiosters</a>
+                                <div class="post-meta">
+                                    Jan 10, 2013
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="post-image">
+                                <div class="img-thumbnail">
+                                    <a href="blog-single.html">
+                                        <img src="/img/blog/blog-thumb-3.jpg" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="post-info">
+                                <a href="blog-single.html">Odiosters Nullam Vitae</a>
+                                <div class="post-meta">
+                                    Jan 10, 2013
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="post-image">
+                                <div class="img-thumbnail">
+                                    <a href="blog-single.html">
+                                        <img src="/img/blog/blog-thumb-1.jpg" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="post-info">
+                                <a href="blog-single.html">Nullam Vitae Nibh Un Odiosters</a>
+                                <div class="post-meta">
+                                    Jan 10, 2013
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <hr />
+
+        <h4>About Us</h4>
+        <p>Nulla nunc dui, tristique in semper vel, congue sed ligula. Nam dolor ligula, faucibus id sodales in, auctor fringilla libero. Nulla nunc dui, tristique in semper vel. Nam dolor ligula, faucibus id sodales in, auctor fringilla libero. </p>
+
+    </aside>
+</div>
+</div>
+
+</div>
