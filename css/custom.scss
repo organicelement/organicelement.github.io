@@ -1,3 +1,11 @@
 ---
 ---
-/* Add here all your CSS customizations */
+/* Testimonials */
+.owl-carousel.customers .owl-item {
+  margin: 5px;
+  img {
+    height: 64px;
+    //    display: block;
+    //    width: 100%;
+  }
+}
