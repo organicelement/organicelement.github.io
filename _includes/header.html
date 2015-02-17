@@ -41,60 +41,42 @@
             </ul>
             <nav class="nav-main mega-menu">
                 <ul class="nav nav-pills nav-main" id="mainMenu">
-                    <li class="dropdown active">
-                        <a class="dropdown-toggle" href="#">
-                            Home
-                            <i class="fa fa-angle-down"></i>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li class="dropdown-submenu">
-                                <a href="#">Sliders</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="index.html">Revolution Slider</a></li>
-                                    <li><a href="index-slider-2.html">Nivo Slider</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="index.html">Home - Default</a></li>
-                            <li><a href="index-2.html">Home - Color</a></li>
-                            <li><a href="index-3.html">Home - Light</a></li>
-                            <li><a href="index-4.html">Home - Video</a></li>
-                            <li><a href="index-5.html">Home - Video - Light</a></li>
-                            <li><a href="index-one-page.html">One Page Website</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="shortcodes.html">Shortcodes</a>
+                    <li {% if page.url contains '/index' %} class="active"{% endif %}>
+                        <a href="index.html">Home</a>
                     </li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" href="#">
-                            About Us
+                            Services
                             <i class="fa fa-angle-down"></i>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="about-us.html">About Us</a></li>
-                            <li><a href="about-us-basic.html">About Us - Basic</a></li>
-                            <li><a href="about-me.html">About Me</a></li>
+                            <li><a href="services.html">Open Source Consulting</a></li>
+                            <li><a href="portfolio-4-columns.html">Product Development</a></li>
+                            <li><a href="portfolio-3-columns.html">Policy and Governance</a></li>
+                            <li><a href="portfolio-2-columns.html">Team Management</a></li>
+                            <li><a href="portfolio-lightbox.html">Project Management</a></li>
                         </ul>
                     </li>
                     <li class="dropdown mega-menu-item mega-menu-fullwidth">
                         <a class="dropdown-toggle" href="#">
-                            Features
+                            Open Source Projects
                             <i class="fa fa-angle-down"></i>
                         </a>
                         <ul class="dropdown-menu">
+                            <!--...things we do-->
                             <li>
                                 <div class="mega-menu-content">
                                     <div class="row">
                                         <div class="col-md-3">
                                             <ul class="sub-menu">
                                                 <li>
-                                                    <span class="mega-menu-sub-title">Main Features</span>
+                                                    <span class="mega-menu-sub-title">Apache</span>
                                                     <ul class="sub-menu">
-                                                        <li><a href="feature-pricing-tables.html">Pricing Tables</a></li>
-                                                        <li><a href="feature-icons.html">Icons</a></li>
-                                                        <li><a href="feature-animations.html">Animations</a></li>
-                                                        <li><a href="feature-typography.html">Typography</a></li>
-                                                        <li><a href="feature-grid-system.html">Grid System</a></li>
+                                                        <li><a href="feature-pricing-tables.html">Directory Server</a></li>
+                                                        <li><a href="feature-pricing-tables.html">ServiceMix</a></li>
+                                                        <li><a href="feature-icons.html">Felix</a></li>
+                                                        <li><a href="feature-animations.html">Karaf</a></li>
+                                                        <li><a href="feature-typography.html">jclouds</a></li>
                                                     </ul>
                                                 </li>
                                             </ul>
@@ -102,17 +84,10 @@
                                         <div class="col-md-3">
                                             <ul class="sub-menu">
                                                 <li>
-                                                    <span class="mega-menu-sub-title">Headers</span>
+                                                    <span class="mega-menu-sub-title">Github</span>
                                                     <ul class="sub-menu">
-                                                        <li><a href="index-header-2.html">Header Version 2</a></li>
-                                                        <li><a href="index-header-3.html">Header Version 3</a></li>
-                                                        <li><a href="index-header-4.html">Header Version 4</a></li>
-                                                        <li><a href="index-header-5.html">Header Version 5</a></li>
-                                                        <li><a href="index-header-6.html">Header Version 6</a></li>
-                                                        <li><a href="index-header-7.html">Header Version 7 (Below Slider)</a></li>
-                                                        <li><a href="index-header-8.html">Header Version 8 (Full Video)</a></li>
-                                                        <li><a href="index-header-signin.html">Header - Sign In / Sign Up</a></li>
-                                                        <li><a href="index-header-logged.html">Header - Logged</a></li>
+                                                        <li><a href="https://github.com/ccustine/sass4j">Sass4j</a></li>
+                                                        <li><a href="https://github.com/ccustine/littlesnapper-chrome">Little Snapper - Chrome Extension</a></li>
                                                     </ul>
                                                 </li>
                                             </ul>
@@ -153,71 +128,19 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="dropdown">
+                    <li class="dropdown{% if page.url contains '/about' %} active {% endif %}">
                         <a class="dropdown-toggle" href="#">
-                            Portfolio
+                            About Us
                             <i class="fa fa-angle-down"></i>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="portfolio-4-columns.html">4 Columns</a></li>
-                            <li><a href="portfolio-3-columns.html">3 Columns</a></li>
-                            <li><a href="portfolio-2-columns.html">2 Columns</a></li>
-                            <li><a href="portfolio-lightbox.html">Portfolio Lightbox</a></li>
-                            <li><a href="portfolio-timeline.html">Portfolio Timeline</a></li>
-                            <li><a href="portfolio-full-width.html">Portfolio Full Width</a></li>
-                            <li><a href="portfolio-single-project.html">Single Project</a></li>
+                            <li><a href="about.html">Staff</a></li>
+                            <li><a href="about-projects.html">Projects</a></li>
+                            <li><a href="about-events.html">Events</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" href="#">
-                            Pages
-                            <i class="fa fa-angle-down"></i>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li class="dropdown-submenu">
-                                <a href="#">Shop</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="shop-full-width.html">Shop - Full Width</a></li>
-                                    <li><a href="shop-sidebar.html">Shop - Sidebar</a></li>
-                                    <li><a href="shop-product-full-width.html">Shop - Product Full Width</a></li>
-                                    <li><a href="shop-product-sidebar.html">Shop - Product Sidebar</a></li>
-                                    <li><a href="shop-cart.html">Shop - Cart</a></li>
-                                    <li><a href="shop-login.html">Shop - Login</a></li>
-                                    <li><a href="shop-checkout.html">Shop - Checkout</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a href="#">Blog</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="blog-full-width.html">Blog Full Width</a></li>
-                                    <li><a href="blog-large-image.html">Blog Large Image</a></li>
-                                    <li><a href="blog-medium-image.html">Blog Medium Image</a></li>
-                                    <li><a href="blog-timeline.html">Blog Timeline</a></li>
-                                    <li><a href="blog-post.html">Single Post</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="page-full-width.html">Full width</a></li>
-                            <li><a href="page-left-sidebar.html">Left sidebar</a></li>
-                            <li><a href="page-right-sidebar.html">Right sidebar</a></li>
-                            <li><a href="page-custom-header.html">Custom Header</a></li>
-                            <li><a href="page-404.html">404 Error</a></li>
-                            <li><a href="page-team.html">Team</a></li>
-                            <li><a href="page-services.html">Services</a></li>
-                            <li><a href="page-careers.html">Careers</a></li>
-                            <li><a href="page-faq.html">FAQ</a></li>
-                            <li><a href="page-login.html">Login / Register</a></li>
-                            <li><a href="sitemap.html">Sitemap</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" href="#">
-                            Contact Us
-                            <i class="fa fa-angle-down"></i>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="contact-us.html">Contact Us - Basic</a></li>
-                            <li><a href="contact-us-advanced.php">Contact Us - Advanced</a></li>
-                        </ul>
+                    <li {% if page.url contains '/contact' %} class="active"{% endif %}>
+                        <a href="contact.html">Contact Us</a>
                     </li>
                 </ul>
             </nav>
