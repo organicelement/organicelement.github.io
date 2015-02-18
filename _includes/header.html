@@ -1,7 +1,7 @@
 <header id="header" class="dark flat-menu single-menu">
     <div class="container">
         <h1 class="logo">
-            <a href="index.html">
+            <a href="/index.html">
                 <img alt="Organic Element" width="330" height="44" data-sticky-width="200" data-sticky-height="32" src="{{ site.baseurl }}/custom/img/logo2.svg">
             </a>
         </h1>
@@ -41,8 +41,11 @@
             </ul>
             <nav class="nav-main mega-menu">
                 <ul class="nav nav-pills nav-main" id="mainMenu">
-                    <li {% if page.url contains '/index' %} class="active"{% endif %}>
-                        <a href="index.html">Home</a>
+                    <li {% if page.url == '/index.html' %} class="active"{% endif %}>
+                        <a href="/index.html">Home</a>
+                    </li>
+                    <li {% if page.url contains '/blog' %} class="active"{% endif %}>
+                        <a href="/blog">Blog</a>
                     </li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" href="#">
@@ -51,10 +54,10 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a href="services.html">Open Source Consulting</a></li>
-                            <li><a href="portfolio-4-columns.html">Product Development</a></li>
-                            <li><a href="portfolio-3-columns.html">Policy and Governance</a></li>
-                            <li><a href="portfolio-2-columns.html">Team Management</a></li>
-                            <li><a href="portfolio-lightbox.html">Project Management</a></li>
+                            <li><a href="services-product.html">Product Development</a></li>
+                            <li><a href="services-opensource.html">Policy and Governance</a></li>
+                            <li><a href="service-teams.html">Team Management</a></li>
+                            <li><a href="services-pm.html">Project Management</a></li>
                         </ul>
                     </li>
                     <li class="dropdown mega-menu-item mega-menu-fullwidth">
