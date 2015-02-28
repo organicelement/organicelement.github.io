@@ -1,8 +1,8 @@
 ---
 title:  "test"
 date:   2014-08-15 01:28:38
-categories: [ development ]
-tags: [ jclouds ]
+categories: [ "development", "open source" ]
+tags: [ jclouds, apache, test1, test2 ]
 author: Chris Custine
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve --watch`, which launches a web server and auto-regenerates your site when a file is updated.
@@ -11,18 +11,7 @@ To add new posts, simply add a file in the `_posts` directory that follows the c
 
 Jekyll also offers powerful support for code snippets:
 
-{% highlight ruby linenos %}
-
-test def show
-  @widget = Widget(params[:id])
-  respond_to do |format|
-    format.html # show.html.erb
-    format.json { render json: @widget }
-  end
-end
-
-{% endhighlight %}
-
+{% gist ccustine/8774090 %}
 
 Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll’s dedicated Help repository][jekyll-help].
 

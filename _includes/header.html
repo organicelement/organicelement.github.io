@@ -42,10 +42,10 @@
             <nav class="nav-main mega-menu">
                 <ul class="nav nav-pills nav-main" id="mainMenu">
                     <li {% if page.url == '/index.html' %} class="active"{% endif %}>
-                        <a href="/index.html">Home</a>
+                        <a href="{{ site.baseurl }}/index.html">Home</a>
                     </li>
                     <li {% if page.url contains '/blog' %} class="active"{% endif %}>
-                        <a href="/blog">Blog</a>
+                        <a href="{{ site.baseurl }}/blog">Blog</a>
                     </li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" href="#">
@@ -53,11 +53,11 @@
                             <i class="fa fa-angle-down"></i>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="services.html">Open Source Consulting</a></li>
-                            <li><a href="services-product.html">Product Development</a></li>
-                            <li><a href="services-opensource.html">Policy and Governance</a></li>
-                            <li><a href="service-teams.html">Team Management</a></li>
-                            <li><a href="services-pm.html">Project Management</a></li>
+                            <li><a href="{{ site.baseurl }}/services.html">Open Source Consulting</a></li>
+                            <li><a href="{{ site.baseurl }}/services-product.html">Product Development</a></li>
+                            <li><a href="{{ site.baseurl }}/services-opensource.html">Policy and Governance</a></li>
+                            <li><a href="{{ site.baseurl }}/service-teams.html">Team Management</a></li>
+                            <li><a href="{{ site.baseurl }}/services-pm.html">Project Management</a></li>
                         </ul>
                     </li>
                     <li class="dropdown mega-menu-item mega-menu-fullwidth">
@@ -163,13 +163,13 @@
                             <i class="fa fa-angle-down"></i>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="about.html">Staff</a></li>
-                            <li><a href="about-projects.html">Projects</a></li>
-                            <li><a href="about-events.html">Events</a></li>
+                            <li><a href="{{ site.baseurl }}/about.html">Staff</a></li>
+                            <li><a href="{{ site.baseurl }}/about-projects.html">Projects</a></li>
+                            <li><a href="{{ site.baseurl }}/about-events.html">Events</a></li>
                         </ul>
                     </li>
                     <li {% if page.url contains '/contact' %} class="active"{% endif %}>
-                        <a href="contact.html">Contact Us</a>
+                        <a href="{{ site.baseurl }}/contact.html">Contact Us</a>
                     </li>
                 </ul>
             </nav>
