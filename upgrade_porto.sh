@@ -5,12 +5,12 @@ mkdir -p custom/tmp/css;
 cp ./index.html custom/tmp/index.html.bak;
 cp css/custom.scss custom/tmp/css/custom.scss.bak;
 cp -R master/sass/custom/ custom/tmp/sass;
-cp ../porto/HTML/*.html .;
-cp -R ../porto/HTML/video .;
-cp -R ../porto/HTML/vendor .;
-cp -R ../porto/HTML/js .;
-cp -R ../porto/HTML/img .;
-cp -R ../porto/HTML/master .;
+cp ../porto/theme/HTML/*.html .;
+cp -R ../porto/theme/HTML/video .;
+cp -R ../porto/theme/HTML/vendor .;
+cp -R ../porto/theme/HTML/js .;
+cp -R ../porto/theme/HTML/img .;
+cp -R ../porto/theme/HTML/master .;
 cp custom/tmp/index.html.bak ./index.html;
 cp -R custom/tmp/sass/ master/sass/custom;
 
